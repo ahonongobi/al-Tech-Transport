@@ -16,7 +16,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
   List<PopularFilterListData> accomodationListData =
       PopularFilterListData.accomodationList;
 
-  RangeValues _values = const RangeValues(100, 600);
+  RangeValues _values = const RangeValues(300, 700);
   double distValue = 50.0;
 
   @override
@@ -40,7 +40,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
                     const Divider(
                       height: 1,
                     ),
-                    distanceViewUI(),
+                    //distanceViewUI(),
                     const Divider(
                       height: 1,
                     ),
@@ -78,7 +78,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
                     },
                     child: Center(
                       child: Text(
-                        'Apply',
+                        'Appliquer',
                         style: TextStyle(
                             fontWeight: FontWeight.w500,
                             fontSize: 18,
@@ -104,7 +104,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
           padding:
               const EdgeInsets.only(left: 16, right: 16, top: 16, bottom: 8),
           child: Text(
-            'Type of Accommodation',
+            'Type d\'accommodation',
             textAlign: TextAlign.left,
             style: TextStyle(
                 color: Colors.grey,
@@ -247,7 +247,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
           padding:
               const EdgeInsets.only(left: 16, right: 16, top: 16, bottom: 8),
           child: Text(
-            'Popular filters',
+            'Filtres populaires',
             textAlign: TextAlign.left,
             style: TextStyle(
                 color: Colors.grey,
@@ -342,7 +342,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
         Padding(
           padding: const EdgeInsets.all(16.0),
           child: Text(
-            'Price (for 1 night)',
+            'Prix',
             textAlign: TextAlign.left,
             style: TextStyle(
                 color: Colors.grey,
@@ -402,7 +402,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
             Expanded(
               child: Center(
                 child: Text(
-                  'Filters',
+                  'Filtrer',
                   style: TextStyle(
                     fontWeight: FontWeight.w600,
                     fontSize: 22,

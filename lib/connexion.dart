@@ -1,7 +1,7 @@
 import 'dart:convert';
-
 import 'package:best_flutter_ui_templates/constante/TextWithStyle.dart';
 import 'package:best_flutter_ui_templates/forgot_password.dart';
+import 'package:best_flutter_ui_templates/main_menu.dart';
 import 'package:best_flutter_ui_templates/navigation_home_screen.dart';
 import 'package:best_flutter_ui_templates/register.dart';
 import 'package:flutter/material.dart';
@@ -43,7 +43,8 @@ class _Connexion extends State<Connexion> {
         child: new Scaffold(
             body: new SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.all(25.0),
+            padding: const EdgeInsets.only(
+                left: 25.0, top: 50.0, right: 25.0, bottom: 25.0),
             child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -169,6 +170,8 @@ class _Connexion extends State<Connexion> {
                           ),
                           new Material(
                               elevation: 5.0,
+                              borderRadius:
+                                  const BorderRadius.all(Radius.circular(24.0)),
                               //borderRadius: BorderRadius.circular(30.0),
                               //color: Color(0xff01A0C7),
                               color: Color(0xFF008C27),
@@ -241,7 +244,9 @@ class _Connexion extends State<Connexion> {
     Navigator.push(
         context,
         new MaterialPageRoute(
-            builder: (BuildContext context) => new NavigationHomeScreen()));
+            builder: (BuildContext context) => new Inscription(
+                  userType: null,
+                )));
   }
 
   void forgotPassword() {
@@ -259,7 +264,7 @@ class _Connexion extends State<Connexion> {
 
   Future userLogin() async {
     // SERVER LOGIN API URL
-    var url = 'http://mestps.tech/uac_mcf.php';
+    //var url = 'http://mestps.tech/uac_mcf.php';
 
     // Store all data with Param Name.
     //var data = {'phone': phone, 'password': password};
@@ -270,18 +275,28 @@ class _Connexion extends State<Connexion> {
 
     // Starting Web API Call.
     //var response = await http.post(url, body: json.encode(map));
-    var response = await http.post(url, body: json.encode(map));
+    //var response = await http.post(url, body: json.encode(map));
 
     // Getting Server response into variable.
-    var message = jsonDecode(response.body);
+    ///var message = jsonDecode(response.body);
 
     // If the Response Message is Matched.
-    if (message == 'Login Matched') {
-      // Navigate to Home.
+    //if (message == 'Login Matched') {
+    // Navigate to Home.
+    // Navigator.push(context,
+    //  MaterialPageRoute(builder: (BuildContext context) => MainMenu()));
+    //}
+    if (email == "test@gmail.com") {
+      Navigator.push(context,
+          MaterialPageRoute(builder: (BuildContext context) => MainMenu()));
+    } else if (email == "entrepreneur@gmail.com") {
       Navigator.push(
           context,
           MaterialPageRoute(
               builder: (BuildContext context) => NavigationHomeScreen()));
+    } else if (email == "simple@gmail.com") {
+      Navigator.push(context,
+          MaterialPageRoute(builder: (BuildContext context) => MainMenu()));
     } else {
       // Showing Alert Dialog with Response JSON Message.
       showDialog(
@@ -289,7 +304,7 @@ class _Connexion extends State<Connexion> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: new Text(message),
+            title: new Text("message"),
             actions: <Widget>[
               FlatButton(
                 child: new Text("OK"),

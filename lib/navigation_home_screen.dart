@@ -1,3 +1,4 @@
+import 'package:best_flutter_ui_templates/about.dart';
 import 'package:best_flutter_ui_templates/app_theme.dart';
 import 'package:best_flutter_ui_templates/chatscreen/home-screen.dart';
 import 'package:best_flutter_ui_templates/custom_drawer/drawer_user_controller.dart';
@@ -137,6 +138,9 @@ class _NavigationHomeScreenState extends State<NavigationHomeScreen>
         setState(() {
           screenView = Mappages();
         });
+      } else if (drawerIndex == DrawerIndex.About) {
+        Navigator.of(context).push(new MaterialPageRoute(
+            builder: (BuildContext context) => new About()));
       } else if (drawerIndex == DrawerIndex.louer) {
         setState(() {
           screenView = Louerpages();

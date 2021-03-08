@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:best_flutter_ui_templates/choice.dart';
 import 'package:best_flutter_ui_templates/connexion.dart';
 import 'package:best_flutter_ui_templates/constante/TextWithStyle.dart';
 import 'package:best_flutter_ui_templates/entreprise_info.dart';
@@ -33,6 +34,11 @@ class _Inscription extends State<Inscription> {
   String statut;
 
   List<Statut> users = <Statut>[
+    const Statut(
+        'Veuillez selectionner',
+        Icon(
+          Icons.person,
+        )),
     const Statut(
         'Covoiturier',
         Icon(
@@ -68,7 +74,8 @@ class _Inscription extends State<Inscription> {
         child: new Scaffold(
             body: new SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.all(25.0),
+            padding: const EdgeInsets.only(
+                left: 25.0, top: 50.0, right: 25.0, bottom: 25.0),
             child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -289,6 +296,8 @@ class _Inscription extends State<Inscription> {
                           ),
                           new Material(
                               elevation: 5.0,
+                              borderRadius:
+                                  const BorderRadius.all(Radius.circular(24.0)),
                               //borderRadius: BorderRadius.circular(30.0),
                               //color: Color(0xff01A0C7),
                               color: Color(0xFF008C27),
@@ -365,6 +374,11 @@ class _Inscription extends State<Inscription> {
           builder: (BuildContext context) => new Entreprise(
                 userType: statut,
               )));
+    }
+
+    if (statut == "Covoiturier") {
+      Navigator.of(context).push(new MaterialPageRoute(
+          builder: (BuildContext context) => new Choice()));
     }
 
     var url = 'http://mestps.tech/uac_mcf.php';

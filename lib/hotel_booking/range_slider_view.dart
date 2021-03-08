@@ -37,12 +37,12 @@ class _RangeSliderViewState extends State<RangeSliderView> {
                   Container(
                     width: 54,
                     child: Text(
-                      '\$${_values.start.round()}',
+                      '${_values.start.round()}F',
                       textAlign: TextAlign.center,
                     ),
                   ),
                   Expanded(
-                    flex: 1000 - _values.start.round(),
+                    flex: 200000 - _values.start.round(),
                     child: const SizedBox(),
                   ),
                 ],
@@ -56,12 +56,12 @@ class _RangeSliderViewState extends State<RangeSliderView> {
                   Container(
                     width: 54,
                     child: Text(
-                      '\$${_values.end.round()}',
+                      '${_values.end.round()}F',
                       textAlign: TextAlign.center,
                     ),
                   ),
                   Expanded(
-                    flex: 1000 - _values.end.round(),
+                    flex: 200000 - _values.end.round(),
                     child: const SizedBox(),
                   ),
                 ],
@@ -75,7 +75,7 @@ class _RangeSliderViewState extends State<RangeSliderView> {
             child: RangeSlider(
               values: _values,
               min: 0.0,
-              max: 1000.0,
+              max: 200000.0,
               activeColor: HotelAppTheme.buildLightTheme().primaryColor,
               inactiveColor: Colors.grey.withOpacity(0.4),
               divisions: 1000,

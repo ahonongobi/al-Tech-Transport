@@ -1,4 +1,6 @@
 import 'package:best_flutter_ui_templates/app_theme.dart';
+import 'package:best_flutter_ui_templates/contactez.dart';
+import 'package:best_flutter_ui_templates/contactez_nous.dart';
 import 'package:flutter/material.dart';
 
 class HelpScreen extends StatefulWidget {
@@ -32,7 +34,7 @@ class _HelpScreenState extends State<HelpScreen> {
               Container(
                 padding: const EdgeInsets.only(top: 8),
                 child: Text(
-                  'How can we help you?',
+                  'Besoin d\'aide?',
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
@@ -40,10 +42,10 @@ class _HelpScreenState extends State<HelpScreen> {
                 ),
               ),
               Container(
-                padding: const EdgeInsets.only(top: 16),
+                padding: const EdgeInsets.only(top: 16, left: 5.0, right: 5.0),
                 child: const Text(
-                  'It looks like you are experiencing problems\nwith our sign up process. We are here to\nhelp so please get in touch with us',
-                  textAlign: TextAlign.center,
+                  'je suis un developeeur fullstack web mobile et desktop. \nun analyste programeur bien experimenté.',
+                  textAlign: TextAlign.justify,
                   style: TextStyle(
                     fontSize: 16,
                   ),
@@ -68,14 +70,20 @@ class _HelpScreenState extends State<HelpScreen> {
                         ],
                       ),
                       child: Material(
-                        color: Colors.transparent,
+                        color: Color(0xFF008C27),
                         child: InkWell(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        ContactezUs()));
+                          },
                           child: Center(
                             child: Padding(
                               padding: const EdgeInsets.all(4.0),
                               child: Text(
-                                'Chat with Us',
+                                'Contactez',
                                 style: TextStyle(
                                   fontWeight: FontWeight.w500,
                                   color: Colors.white,

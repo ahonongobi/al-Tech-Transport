@@ -1,3 +1,4 @@
+import 'package:best_flutter_ui_templates/app_theme.dart';
 import 'package:flutter/material.dart';
 
 class CategorySelector extends StatefulWidget {
@@ -14,9 +15,16 @@ class _CategorySelectorState extends State<CategorySelector> {
     return Container(
       height: 90.0,
       color: Color(0xFF008C27),
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: BackButton(color: Colors.white),
+      child: Center(
+        child: Text(
+          'Discussion',
+          style: TextStyle(
+            fontFamily: AppTheme.fontName,
+            fontWeight: FontWeight.w600,
+            fontSize: 20,
+            color: Color(0xFFFFFFFF),
+          ),
+        ),
       ),
     );
   }

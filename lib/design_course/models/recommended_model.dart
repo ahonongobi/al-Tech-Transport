@@ -1,10 +1,15 @@
+import 'package:best_flutter_ui_templates/parametre.dart';
+import 'package:best_flutter_ui_templates/profile.dart';
+import 'package:flutter/material.dart';
+
 class RecommendedModel {
   String name;
   String tagLine;
   String image;
+
   List<String> images;
   String description;
-  int price;
+  String price;
 
   RecommendedModel(this.name, this.tagLine, this.image, this.images,
       this.description, this.price);
@@ -18,7 +23,7 @@ List<RecommendedModel> recommendations = recommendationsData
 var recommendationsData = [
   {
     "name": "Raja Ampat, Indonesia",
-    "tagLine": "Raja Ampat The Hidden Place",
+    "tagLine": "Paramètre",
     "image":
         "https://images.pexels.com/photos/2583852/pexels-photo-2583852.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
     "images": [
@@ -28,13 +33,12 @@ var recommendationsData = [
       "https://live.staticflickr.com/1449/23852180634_54f8aa0404_b.jpg",
       "https://cdn.pixabay.com/photo/2017/08/09/12/05/piaynemo-2614341_960_720.jpg"
     ],
-    "description":
-        "Raja Ampat is one of the favorite tourist destination, you can feel cultural tourism and history to explore exotic beaches in Raja Ampat",
-    "price": 130
+    "description": "allo",
+    "price": "assets/fitness_app/settings.png",
   },
   {
     "name": "Bali, Indonesia",
-    "tagLine": "Bali The Beautiful Heaven",
+    "tagLine": "Profile",
     "image":
         "https://cdn.pixabay.com/photo/2018/01/12/10/19/fantasy-3077928__340.jpg",
     "images": [
@@ -44,13 +48,12 @@ var recommendationsData = [
       "https://images.unsplash.com/photo-1517480448885-d5c53555ba8c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1034&q=80",
       "https://images.unsplash.com/photo-1524675053444-52c3ca294ad2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
     ],
-    "description":
-        "Bali, the famed Island of the Gods, with its varied landscape of hills and mountains, rugged coastlines and sandy beaches, lush rice terraces and barren volcanic hillsides all providing a picturesque backdrop to its colourful, deeply spiritual and unique culture, stakes a serious claim to be paradise on earth.",
-    "price": 120
+    "description": "Parametre",
+    "price": "assets/fitness_app/tab_4.png",
   },
   {
     "name": "Yogyakarta, Indonesia",
-    "tagLine": "Yogyakarta Istimewa",
+    "tagLine": "Localiser",
     "image":
         "https://images.unsplash.com/photo-1584810359583-96fc3448beaa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80",
     "images": [
@@ -60,13 +63,12 @@ var recommendationsData = [
       "https://images.unsplash.com/photo-1529680218503-29abd728bef5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=679&q=80",
       "https://images.unsplash.com/photo-1566559532512-004a6df74db5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80"
     ],
-    "description":
-        "Yogyakarta is a bustling town of some half a million people and the most popular tourist destination on Java, largely thanks to its proximity to the temples of Borobudur and Prambanan.",
-    "price": 110
+    "description": "Parametre",
+    "price": "assets/fitness_app/google-maps.png",
   },
   {
     "name": "Wiang Kum Kam, Thailand",
-    "tagLine": "Amazing Thailand",
+    "tagLine": "messages",
     "image":
         "https://images.unsplash.com/photo-1528181304800-259b08848526?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
     "images": [
@@ -78,11 +80,11 @@ var recommendationsData = [
     ],
     "description":
         "Thailand is a Southeast Asian country. It's known for tropical beaches, opulent royal palaces, ancient ruins and ornate temples displaying figures of Buddha.",
-    "price": 180
+    "price": "assets/fitness_app/chat.png",
   },
   {
     "name": "Garden The Bay, Singapore",
-    "tagLine": "The Singapore Tourism Board",
+    "tagLine": "Trajets",
     "image":
         "https://images.unsplash.com/photo-1506351421178-63b52a2d2562?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80",
     "images": [
@@ -92,8 +94,67 @@ var recommendationsData = [
       "https://images.unsplash.com/photo-1555912881-1ecd82307e0e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80",
       "https://images.unsplash.com/photo-1499359875449-10bbeb21501e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
     ],
-    "description":
-        "Singapore is more than its tourist attractions. It’s constantly evolving, reinventing, and reimagining itself, with people who are passionate about creating new possibilities.",
-    "price": 200
+    "description": "Parametre",
+    "price": "assets/fitness_app/v1.jpg",
+  },
+  {
+    "name": "Garden The Bay, Singapore",
+    "tagLine": "Aides",
+    "image":
+        "https://images.unsplash.com/photo-1506351421178-63b52a2d2562?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1506351421178-63b52a2d2562?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80",
+      "https://images.unsplash.com/photo-1516496636080-14fb876e029d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+      "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1249&q=80",
+      "https://images.unsplash.com/photo-1555912881-1ecd82307e0e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80",
+      "https://images.unsplash.com/photo-1499359875449-10bbeb21501e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+    ],
+    "description": "Parametre",
+    "price": "assets/fitness_app/help.png",
+  },
+  {
+    "name": "Garden The Bay, Singapore",
+    "tagLine": "A Propos",
+    "image":
+        "https://images.unsplash.com/photo-1506351421178-63b52a2d2562?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1506351421178-63b52a2d2562?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80",
+      "https://images.unsplash.com/photo-1516496636080-14fb876e029d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+      "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1249&q=80",
+      "https://images.unsplash.com/photo-1555912881-1ecd82307e0e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80",
+      "https://images.unsplash.com/photo-1499359875449-10bbeb21501e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+    ],
+    "description": "Parametre",
+    "price": "assets/fitness_app/about.png",
+  },
+  {
+    "name": "Garden The Bay, Singapore",
+    "tagLine": "Partager",
+    "image":
+        "https://images.unsplash.com/photo-1506351421178-63b52a2d2562?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1506351421178-63b52a2d2562?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80",
+      "https://images.unsplash.com/photo-1516496636080-14fb876e029d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+      "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1249&q=80",
+      "https://images.unsplash.com/photo-1555912881-1ecd82307e0e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80",
+      "https://images.unsplash.com/photo-1499359875449-10bbeb21501e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+    ],
+    "description": "Parametre",
+    "price": "assets/fitness_app/share.png",
+  },
+  {
+    "name": "Garden The Bay, Singapore",
+    "tagLine": "Benin Taxi",
+    "image":
+        "https://images.unsplash.com/photo-1506351421178-63b52a2d2562?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1506351421178-63b52a2d2562?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80",
+      "https://images.unsplash.com/photo-1516496636080-14fb876e029d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+      "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1249&q=80",
+      "https://images.unsplash.com/photo-1555912881-1ecd82307e0e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80",
+      "https://images.unsplash.com/photo-1499359875449-10bbeb21501e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+    ],
+    "description": "Parametre",
+    "price": "assets/fitness_app/taxi.png",
   },
 ];

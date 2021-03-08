@@ -15,37 +15,32 @@ class _ChatScreenState extends State<ChatScreen> {
   _buildMessage(Message message, bool isMe) {
     final Container msg = Container(
       margin: isMe
-          ? EdgeInsets.only(
-              top: 8.0,
-              bottom: 8.0,
-              left: 80.0,
-            )
-          : EdgeInsets.only(
-              top: 8.0,
-              bottom: 8.0,
-            ),
+          ? EdgeInsets.only(top: 8.0, bottom: 8.0, left: 80.0, right: 8.0)
+          : EdgeInsets.only(top: 8.0, bottom: 8.0, left: 8.0),
       padding: EdgeInsets.symmetric(horizontal: 25.0, vertical: 15.0),
       width: MediaQuery.of(context).size.width * 0.75,
       decoration: BoxDecoration(
         color: isMe ? Color(0xFF008C27) : Color(0xFFFFEFEE),
         borderRadius: isMe
-            ? BorderRadius.only(
-                topLeft: Radius.circular(15.0),
-                bottomLeft: Radius.circular(15.0),
+            ? BorderRadius.all(
+                Radius.circular(15.0),
               )
-            : BorderRadius.only(
-                topRight: Radius.circular(15.0),
-                bottomRight: Radius.circular(15.0),
+            : BorderRadius.all(
+                Radius.circular(15.0),
               ),
       ),
+      //A mettre apres  BorderRadius.only(
+      //topRight: Radius.circular(15.0),
+      //bottomRight: Radius.circular(15.0),
+      //),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(
             message.time,
             style: TextStyle(
-              color: Colors.black,
-              fontSize: 16.0,
+              color: !isMe ? Colors.black : Colors.white,
+              fontSize: 9.0,
               fontWeight: FontWeight.w600,
             ),
           ),
@@ -53,8 +48,8 @@ class _ChatScreenState extends State<ChatScreen> {
           Text(
             message.text,
             style: TextStyle(
-              color: Colors.black,
-              fontSize: 16.0,
+              color: !isMe ? Colors.black : Colors.white,
+              fontSize: 15.0,
               fontWeight: FontWeight.w600,
             ),
           ),
@@ -79,7 +74,7 @@ class _ChatScreenState extends State<ChatScreen> {
       child: Row(
         children: <Widget>[
           IconButton(
-            icon: Icon(Icons.photo),
+            icon: Icon(Icons.attach_file),
             iconSize: 25.0,
             color: Color(0xFF008C27),
             onPressed: () {},
@@ -113,7 +108,7 @@ class _ChatScreenState extends State<ChatScreen> {
         title: Text(
           widget.user.name,
           style: TextStyle(
-            fontSize: 28.0,
+            fontSize: 20.0,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -147,7 +142,7 @@ class _ChatScreenState extends State<ChatScreen> {
                   ),
                   child: ListView.builder(
                     reverse: true,
-                    padding: EdgeInsets.only(top: 15.0),
+                    padding: EdgeInsets.only(top: 5.0),
                     itemCount: messages.length,
                     itemBuilder: (BuildContext context, int index) {
                       final Message message = messages[index];

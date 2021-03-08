@@ -68,7 +68,10 @@ class _Contactez extends State<Contactez> {
     return new GestureDetector(
         onTap: (() => FocusScope.of(context).requestFocus(new FocusNode())),
         child: new Scaffold(
-            appBar: new AppBar(backgroundColor: Color(0xFF008C27)),
+            appBar: new AppBar(
+              backgroundColor: Color(0xFF008C27),
+              title: Text("Message destiné au locatiare"),
+            ),
             body: new SingleChildScrollView(
               child: Padding(
                 padding: const EdgeInsets.all(25.0),
@@ -76,15 +79,6 @@ class _Contactez extends State<Contactez> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      new TextWithStyle(
-                        "Message destiné au locatiare",
-                        fontWeight: FontWeight.bold,
-                        fontSize: 30.0,
-                        color: Colors.black,
-                      ),
-                      SizedBox(
-                        height: 20.0,
-                      ),
                       new Form(
                           key: _formKey,
                           //autovalidate: _autovalidate,
@@ -379,6 +373,8 @@ class _Contactez extends State<Contactez> {
                               ),
                               new Material(
                                   elevation: 5.0,
+                                  borderRadius: const BorderRadius.all(
+                                      Radius.circular(24.0)),
                                   //borderRadius: BorderRadius.circular(30.0),
                                   //color: Color(0xff01A0C7),
                                   color: Color(0xFF008C27),

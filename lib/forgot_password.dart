@@ -30,101 +30,115 @@ class _PageMotDePasseOublie extends State<PageMotDePasseOubliee> {
     return new GestureDetector(
         onTap: (() => FocusScope.of(context).requestFocus(new FocusNode())),
         child: new Scaffold(
+            appBar: new AppBar(
+              backgroundColor: Colors.white,
+              elevation: 0.0,
+              leading: InkWell(
+                onTap: () {
+                  Navigator.of(context).pop();
+                },
+                child: Icon(
+                  Icons.arrow_back_ios,
+                  color: Colors.black,
+                ),
+              ),
+            ),
             body: new SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.all(25.0),
-            child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  SizedBox(
-                    height: 100.0,
-                  ),
-                  new Image.asset(
-                    "assets/ADMIN-APPROVED-USER-REGISTRATION.png",
-                    fit: BoxFit.fill,
-                    height: MediaQuery.of(context).size.width / 2,
-                  ),
-                  SizedBox(
-                    height: 15.0,
-                  ),
-                  new TextWithStyle(
-                    "Mot de passe oublié",
-                    fontWeight: FontWeight.bold,
-                    fontSize: 30.0,
-                    color: Colors.red,
-                  ),
-                  SizedBox(
-                    height: 20.0,
-                  ),
-                  new Form(
-                      key: _formKey,
-                      child: new Column(
-                        children: [
-                          new TextFormField(
-                            keyboardType: TextInputType.text,
-                            textInputAction: TextInputAction.next,
-                            decoration: InputDecoration(
-                              contentPadding:
-                                  EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-                              prefixIcon: Padding(
-                                  padding: const EdgeInsetsDirectional.only(
-                                      start: 5.0),
-                                  child: new Icon(Icons.email)),
-                              hintText: 'abyssinie@gmail.com',
-                              labelText: 'Email',
-                              labelStyle:
-                                  new TextStyle(fontWeight: FontWeight.bold),
-                              border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(15.0)),
-                            ),
-                            validator: (value) {
-                              if (RegExp(
-                                      r'^.+@[a-zA-Z]+\.{1}[a-zA-Z]+(\.{0,1}[a-zA-Z]+)$')
-                                  .hasMatch(value)) {
-                                return null;
-                              } else
-                                return "Entrez une adresse valide";
-                            },
-                            onChanged: (val) {
-                              setState(() {
-                                email = val;
-                              });
-                            },
-                          ),
-                          SizedBox(
-                            height: 45.0,
-                          ),
-                          new Material(
-                              elevation: 5.0,
-                              borderRadius: BorderRadius.circular(30.0),
-                              //color: Color(0xff01A0C7),
-                              color: Color(0xFF008C27),
-                              child: MaterialButton(
-                                minWidth: MediaQuery.of(context).size.width,
-                                padding:
-                                    EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-                                onPressed: () {
-                                  if (_formKey.currentState.validate()) {
-                                    rechercherUser();
-                                  } else {
-                                    print('Error');
-                                  }
-                                },
-                                child: Text(
-                                  "Valider",
-                                  textAlign: TextAlign.center,
-                                  style: style.copyWith(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                  ),
+              child: Padding(
+                padding: const EdgeInsets.all(25.0),
+                child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      SizedBox(
+                        height: 100.0,
+                      ),
+                      new Image.asset(
+                        "assets/ADMIN-APPROVED-USER-REGISTRATION.png",
+                        fit: BoxFit.fill,
+                        height: MediaQuery.of(context).size.width / 2,
+                      ),
+                      SizedBox(
+                        height: 15.0,
+                      ),
+                      new TextWithStyle(
+                        "Mot de passe oublié",
+                        fontWeight: FontWeight.bold,
+                        fontSize: 30.0,
+                        color: Colors.red,
+                      ),
+                      SizedBox(
+                        height: 20.0,
+                      ),
+                      new Form(
+                          key: _formKey,
+                          child: new Column(
+                            children: [
+                              new TextFormField(
+                                keyboardType: TextInputType.text,
+                                textInputAction: TextInputAction.next,
+                                decoration: InputDecoration(
+                                  contentPadding: EdgeInsets.fromLTRB(
+                                      20.0, 15.0, 20.0, 15.0),
+                                  prefixIcon: Padding(
+                                      padding: const EdgeInsetsDirectional.only(
+                                          start: 5.0),
+                                      child: new Icon(Icons.email)),
+                                  hintText: 'abyssinie@gmail.com',
+                                  labelText: 'Email',
+                                  labelStyle: new TextStyle(
+                                      fontWeight: FontWeight.bold),
+                                  border: OutlineInputBorder(
+                                      borderRadius:
+                                          BorderRadius.circular(15.0)),
                                 ),
-                              )),
-                        ],
-                      )),
-                ]),
-          ),
-        )));
+                                validator: (value) {
+                                  if (RegExp(
+                                          r'^.+@[a-zA-Z]+\.{1}[a-zA-Z]+(\.{0,1}[a-zA-Z]+)$')
+                                      .hasMatch(value)) {
+                                    return null;
+                                  } else
+                                    return "Entrez une adresse valide";
+                                },
+                                onChanged: (val) {
+                                  setState(() {
+                                    email = val;
+                                  });
+                                },
+                              ),
+                              SizedBox(
+                                height: 45.0,
+                              ),
+                              new Material(
+                                  elevation: 5.0,
+                                  borderRadius: BorderRadius.circular(30.0),
+                                  //color: Color(0xff01A0C7),
+                                  color: Color(0xFF008C27),
+                                  child: MaterialButton(
+                                    minWidth: MediaQuery.of(context).size.width,
+                                    padding: EdgeInsets.fromLTRB(
+                                        20.0, 15.0, 20.0, 15.0),
+                                    onPressed: () {
+                                      if (_formKey.currentState.validate()) {
+                                        rechercherUser();
+                                      } else {
+                                        print('Error');
+                                      }
+                                    },
+                                    child: Text(
+                                      "Valider",
+                                      textAlign: TextAlign.center,
+                                      style: style.copyWith(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  )),
+                            ],
+                          )),
+                    ]),
+              ),
+            )));
   }
 
   /*

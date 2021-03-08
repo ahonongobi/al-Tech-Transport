@@ -474,26 +474,11 @@ class _MainMenuState extends State<MainMenu> {
           ],
         ),
       ),
-      body: Card(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(150.0),
-        ),
-        color: Colors.pink,
-        elevation: 10.0,
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
+      body: Padding(
+        padding: const EdgeInsets.only(top: 12.0),
+        child: Stack(
           children: <Widget>[
-            const ListTile(
-              leading: Icon(Icons.album, size: 50),
-              title: Text(
-                'Isaac Dahoue',
-                style: TextStyle(color: Colors.white),
-              ),
-              subtitle: Text(
-                'TWICE',
-                style: TextStyle(color: Colors.white),
-              ),
-            ),
+            mainMenu,
           ],
         ),
       ),

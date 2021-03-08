@@ -87,7 +87,7 @@ class RecentChats extends StatelessWidget {
                             chat.time,
                             style: TextStyle(
                               color: Colors.grey,
-                              fontSize: 15.0,
+                              fontSize: 9.0,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -105,7 +105,7 @@ class RecentChats extends StatelessWidget {
                                     'NEW',
                                     style: TextStyle(
                                       color: Colors.white,
-                                      fontSize: 12.0,
+                                      fontSize: 10.0,
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),

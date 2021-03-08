@@ -354,10 +354,10 @@ class _Entreprise extends State<Entreprise> {
                                 height: 20.0,
                               ),
                               new Material(
-                                  elevation: 5.0,
+                                  elevation: 0.0,
                                   //borderRadius: BorderRadius.circular(30.0),
                                   //color: Color(0xff01A0C7),
-                                  color: Color(0xFFc0a089),
+                                  color: Color(0xFFF0DDC5),
                                   child: MaterialButton(
                                     minWidth: MediaQuery.of(context).size.width,
                                     padding: EdgeInsets.fromLTRB(
@@ -399,6 +399,8 @@ class _Entreprise extends State<Entreprise> {
                               ),
                               new Material(
                                   elevation: 5.0,
+                                  borderRadius: const BorderRadius.all(
+                                      Radius.circular(24.0)),
                                   //borderRadius: BorderRadius.circular(30.0),
                                   //color: Color(0xff01A0C7),
                                   color: Color(0xFF008C27),
@@ -407,26 +409,49 @@ class _Entreprise extends State<Entreprise> {
                                     padding: EdgeInsets.fromLTRB(
                                         20.0, 15.0, 20.0, 15.0),
                                     onPressed: () {
-                                      if (_formKey.currentState.validate()) {
-                                        if (password == password2) {
-                                          userRegistration();
-                                        } else {
-                                          showDialog(
-                                              context: context,
-                                              builder: (BuildContext context) {
-                                                return SimpleDialog(
-                                                  contentPadding:
-                                                      EdgeInsets.all(20.0),
-                                                  children: [
-                                                    TextWithStyle(
-                                                        'Les deux mots de passe sont non conforme')
-                                                  ],
-                                                );
-                                              });
-                                        }
-                                      } else {
-                                        print('Error');
-                                      }
+                                      showDialog(
+                                        barrierDismissible: true,
+                                        context: context,
+                                        builder: (BuildContext context) {
+                                          return AlertDialog(
+                                            title: new Text(
+                                                "Inscription effectuée avec succès"),
+                                            actions: <Widget>[
+                                              FlatButton(
+                                                child: new Text("Se connecter"),
+                                                onPressed: () {
+                                                  Navigator.push(
+                                                      context,
+                                                      MaterialPageRoute(
+                                                          builder: (BuildContext
+                                                                  context) =>
+                                                              NavigationHomeScreen()));
+                                                },
+                                              )
+                                            ],
+                                          );
+                                        },
+                                      );
+                                      //if (_formKey.currentState.validate()) {
+                                      //if (password == password2) {
+                                      //userRegistration();
+                                      //} else {
+                                      //showDialog(
+                                      // context: context,
+                                      // builder: (BuildContext context) {
+                                      //return SimpleDialog(
+                                      //contentPadding:
+                                      // EdgeInsets.all(20.0),
+                                      //children: [
+                                      //TextWithStyle(
+                                      //    'Les deux mots de passe sont non conforme')
+                                      //],
+                                      //);
+                                      //});
+                                      //}
+                                      //} else {
+                                      //print('Error');
+                                      // }
                                     },
                                     child: Text(
                                       "Finaliser",

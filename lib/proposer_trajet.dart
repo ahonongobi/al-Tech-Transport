@@ -422,6 +422,8 @@ class _ProposerState extends State<Proposer> {
                               ),
                               new Material(
                                   elevation: 5.0,
+                                  borderRadius: const BorderRadius.all(
+                                      Radius.circular(24.0)),
                                   //borderRadius: BorderRadius.circular(30.0),
                                   //color: Color(0xff01A0C7),
                                   color: Color(0xFF008C27),

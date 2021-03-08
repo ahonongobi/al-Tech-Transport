@@ -141,7 +141,7 @@ class HotelListView extends StatelessWidget {
                                                         .primaryColor,
                                                   ),
                                                   Text(
-                                                    ' ${hotelData.reviews} Reviews',
+                                                    ' ${hotelData.reviews} étoiles',
                                                     style: TextStyle(
                                                         fontSize: 14,
                                                         color: Colors.grey
@@ -165,7 +165,7 @@ class HotelListView extends StatelessWidget {
                                           CrossAxisAlignment.end,
                                       children: <Widget>[
                                         Text(
-                                          '\$${hotelData.perNight}',
+                                          '${hotelData.perNight}FCFA',
                                           textAlign: TextAlign.left,
                                           style: TextStyle(
                                             fontWeight: FontWeight.w600,
@@ -173,7 +173,7 @@ class HotelListView extends StatelessWidget {
                                           ),
                                         ),
                                         Text(
-                                          '/per night',
+                                          '/par jours',
                                           style: TextStyle(
                                               fontSize: 14,
                                               color:

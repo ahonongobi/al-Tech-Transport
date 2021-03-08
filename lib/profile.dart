@@ -1,13 +1,14 @@
 import 'package:best_flutter_ui_templates/app_theme.dart';
 import 'package:best_flutter_ui_templates/showdraver.dart';
+import 'package:best_flutter_ui_templates/update_profile.dart';
 import 'package:flutter/material.dart';
 
-class Parametre extends StatefulWidget {
+class Profile extends StatefulWidget {
   @override
-  _ParametreState createState() => _ParametreState();
+  _ProfileState createState() => _ProfileState();
 }
 
-class _ParametreState extends State<Parametre> {
+class _ProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -86,24 +87,6 @@ class _ParametreState extends State<Parametre> {
                     ),
                   ),
                 ),
-              ),
-              Card(
-                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                child: ListTile(
-                  leading: Icon(
-                    Icons.power_settings_new,
-                    color: Color(0xFF008C27),
-                  ),
-                  title: Text(
-                    "Deconnexion",
-                    style: TextStyle(
-                      fontFamily: AppTheme.fontName,
-                      fontWeight: FontWeight.w600,
-                      fontSize: 16,
-                      color: AppTheme.darkText,
-                    ),
-                  ),
-                ),
               )
             ],
           ),
@@ -113,7 +96,7 @@ class _ParametreState extends State<Parametre> {
           child: FloatingActionButton(
             onPressed: () {
               Navigator.of(context).push(new MaterialPageRoute(
-                  builder: (BuildContext context) => new ShowdraverScreen()));
+                  builder: (BuildContext context) => new UpdateProfile()));
             },
             tooltip: "Rechercher",
             backgroundColor: Color(0xFF008C27),

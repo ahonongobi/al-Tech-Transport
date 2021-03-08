@@ -4,11 +4,11 @@ import 'package:flutter/material.dart';
 
 import '../fintness_app_theme.dart';
 
-class GlassView extends StatelessWidget {
+class GlassViewTwo extends StatelessWidget {
   final AnimationController animationController;
   final Animation animation;
 
-  const GlassView({Key key, this.animationController, this.animation})
+  const GlassViewTwo({Key key, this.animationController, this.animation})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -121,13 +121,14 @@ class GlassView extends StatelessWidget {
                                     Icons.star,
                                     color: Color(0xFF008C27),
                                   ),
-                                  Icon(
-                                    Icons.star,
-                                    color: Colors.white,
-                                  ),
-                                  Icon(
-                                    Icons.star,
-                                    color: Colors.white,
+                                  InkWell(
+                                    onTap: () {
+                                      print("message");
+                                    },
+                                    child: Icon(
+                                      Icons.message,
+                                      color: Color(0xFF008C27),
+                                    ),
                                   ),
                                   SizedBox(
                                     width: 30.0,
@@ -161,7 +162,7 @@ class GlassView extends StatelessWidget {
                         right: 0,
                         bottom: 10,
                         child: Text(
-                          "230FCFA",
+                          "250FCFA",
                           style: TextStyle(
                             fontFamily: AppTheme.fontName,
                             fontWeight: FontWeight.w600,

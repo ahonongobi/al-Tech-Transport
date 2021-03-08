@@ -4,6 +4,7 @@ import 'package:best_flutter_ui_templates/custom_drawer/home_drawer.dart';
 import 'package:best_flutter_ui_templates/fitness_app/fitness_app_home_screen.dart';
 import 'package:best_flutter_ui_templates/fitness_app/ui_view/body_measurement.dart';
 import 'package:best_flutter_ui_templates/fitness_app/ui_view/glass_view.dart';
+import 'package:best_flutter_ui_templates/fitness_app/ui_view/glass_viewtwo.dart';
 import 'package:best_flutter_ui_templates/fitness_app/ui_view/mediterranesn_diet_view.dart';
 import 'package:best_flutter_ui_templates/fitness_app/ui_view/title_view.dart';
 import 'package:best_flutter_ui_templates/fitness_app/fintness_app_theme.dart';
@@ -23,8 +24,8 @@ import 'package:share/share.dart';
 
 import '../../app_theme.dart';
 
-class MyDiaryScreen extends StatefulWidget {
-  const MyDiaryScreen(
+class MyDiaryScreenTwo extends StatefulWidget {
+  const MyDiaryScreenTwo(
       {Key key,
       this.animationController,
       this.screenIndex,
@@ -37,10 +38,10 @@ class MyDiaryScreen extends StatefulWidget {
   final Function(DrawerIndex) callBackIndex;
   final AnimationController animationController;
   @override
-  _MyDiaryScreenState createState() => _MyDiaryScreenState();
+  _MyDiaryScreenTwoState createState() => _MyDiaryScreenTwoState();
 }
 
-class _MyDiaryScreenState extends State<MyDiaryScreen>
+class _MyDiaryScreenTwoState extends State<MyDiaryScreenTwo>
     with TickerProviderStateMixin {
   Animation<double> topBarAnimation;
   List<HomeList> homeList = HomeList.homeList;
@@ -127,7 +128,7 @@ class _MyDiaryScreenState extends State<MyDiaryScreen>
     //);
 
     listViews.add(
-      GlassView(
+      GlassViewTwo(
           animation: Tween<double>(begin: 0.0, end: 1.0).animate(
               CurvedAnimation(
                   parent: widget.animationController,
@@ -136,7 +137,7 @@ class _MyDiaryScreenState extends State<MyDiaryScreen>
           animationController: widget.animationController),
     );
     listViews.add(
-      GlassView(
+      GlassViewTwo(
           animation: Tween<double>(begin: 0.0, end: 1.0).animate(
               CurvedAnimation(
                   parent: widget.animationController,
@@ -145,7 +146,7 @@ class _MyDiaryScreenState extends State<MyDiaryScreen>
           animationController: widget.animationController),
     );
     listViews.add(
-      GlassView(
+      GlassViewTwo(
           animation: Tween<double>(begin: 0.0, end: 1.0).animate(
               CurvedAnimation(
                   parent: widget.animationController,
@@ -154,7 +155,7 @@ class _MyDiaryScreenState extends State<MyDiaryScreen>
           animationController: widget.animationController),
     );
     listViews.add(
-      GlassView(
+      GlassViewTwo(
           animation: Tween<double>(begin: 0.0, end: 1.0).animate(
               CurvedAnimation(
                   parent: widget.animationController,
@@ -464,7 +465,8 @@ class _MyDiaryScreenState extends State<MyDiaryScreen>
                 onTap: () {
                   Navigator.of(context).pop();
                   Navigator.of(context).push(new MaterialPageRoute(
-                      builder: (BuildContext context) => new MyDiaryScreen()));
+                      builder: (BuildContext context) =>
+                          new MyDiaryScreenTwo()));
                 },
               ),
               new ListTile(

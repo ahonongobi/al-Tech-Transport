@@ -43,7 +43,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     children: <Widget>[
                       CircleAvatar(
                         backgroundColor: Color(0xFF008C27),
-                        radius: 70.0,
+                        radius: 100.0,
                         //child: Icon(
                         //Icons.add_location,
                         //size: 50.0,

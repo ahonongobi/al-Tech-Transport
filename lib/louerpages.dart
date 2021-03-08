@@ -54,7 +54,13 @@ class _LouerpagesState extends State<Louerpages> {
         child: new Scaffold(
             body: new SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.all(25.0),
+            padding: EdgeInsets.only(
+              top: 25.0,
+              left: 25.0,
+              right: 25.0,
+              bottom: 80 + MediaQuery.of(context).padding.bottom,
+            ),
+            // padding: const EdgeInsets.a(25.0),
             child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -70,7 +76,7 @@ class _LouerpagesState extends State<Louerpages> {
                     child: new TextWithStyle(
                       "Poster une offre de location",
                       fontWeight: FontWeight.bold,
-                      fontSize: 20.0,
+                      fontSize: 15.0,
                       color: Colors.black,
                     ),
                   ),
@@ -286,6 +292,8 @@ class _LouerpagesState extends State<Louerpages> {
                           ),
                           new Material(
                               elevation: 5.0,
+                              borderRadius:
+                                  const BorderRadius.all(Radius.circular(24.0)),
                               //borderRadius: BorderRadius.circular(30.0),
                               //color: Color(0xff01A0C7),
                               color: Color(0xFF008C27),
