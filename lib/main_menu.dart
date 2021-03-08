@@ -484,7 +484,11 @@ class _MainMenuState extends State<MainMenu> {
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             const ListTile(
-              leading: Icon(Icons.album, size: 50),
+              leading: CircleAvatar(
+                child: ClipRRect(
+                    child: Image(
+                        image: AssetImage('assets/images/userImage.png'))),
+              ),
               title: Text(
                 'Isaac Dahoue',
                 style: TextStyle(color: Colors.white),
