@@ -128,11 +128,11 @@ class _CourseInfoScreenState extends State<CourseInfoScreen>
                                   child: Row(
                                     children: <Widget>[
                                       Text(
-                                        '4.3',
+                                        'entreprise',
                                         textAlign: TextAlign.left,
                                         style: TextStyle(
                                           fontWeight: FontWeight.w200,
-                                          fontSize: 22,
+                                          fontSize: 18,
                                           letterSpacing: 0.27,
                                           color: DesignCourseAppTheme.grey,
                                         ),

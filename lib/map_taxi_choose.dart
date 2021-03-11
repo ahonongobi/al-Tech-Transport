@@ -34,7 +34,7 @@ class MyMaps extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Google Map Place Picker Demo',
+      title: 'Benin taxi tracker',
       theme: lightTheme,
       darkTheme: darkTheme,
       themeMode: ThemeMode.light,
@@ -60,7 +60,8 @@ class _MapHomePageState extends State<MapHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Google Map Place Picer Demo"),
+          backgroundColor: Color(0xFF008C27),
+          title: Text("Emplacement"),
         ),
         body: Center(
           child: Column(
@@ -68,7 +69,7 @@ class _MapHomePageState extends State<MapHomePage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               RaisedButton(
-                child: Text("Load Google Map"),
+                child: Text("Charger le map"),
                 onPressed: () {
                   Navigator.push(
                     context,

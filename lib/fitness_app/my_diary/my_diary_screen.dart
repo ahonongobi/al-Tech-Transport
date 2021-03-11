@@ -1,3 +1,4 @@
+import 'package:best_flutter_ui_templates/about.dart';
 import 'package:best_flutter_ui_templates/chatscreen/home-screen.dart';
 import 'package:best_flutter_ui_templates/connexion.dart';
 import 'package:best_flutter_ui_templates/custom_drawer/home_drawer.dart';
@@ -14,6 +15,7 @@ import 'package:best_flutter_ui_templates/hotel_booking/hotel_home_screen.dart';
 import 'package:best_flutter_ui_templates/hotel_booking/hotel_list_view.dart';
 import 'package:best_flutter_ui_templates/localiser.dart';
 import 'package:best_flutter_ui_templates/main_menu.dart';
+import 'package:best_flutter_ui_templates/map_taxi.dart';
 import 'package:best_flutter_ui_templates/model/homelist.dart';
 import 'package:best_flutter_ui_templates/parametre.dart';
 import 'package:best_flutter_ui_templates/proposer_trajet.dart';
@@ -221,39 +223,295 @@ class _MyDiaryScreenState extends State<MyDiaryScreen>
           ],
         ),
         drawer: new Drawer(
-          child: new ListView(
-            children: <Widget>[
-              DrawerHeader(
-                child: Container(
-                  height: 120,
-                  width: 120,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    boxShadow: <BoxShadow>[
-                      BoxShadow(
-                          color: AppTheme.grey.withOpacity(0.6),
-                          offset: const Offset(2.0, 4.0),
-                          blurRadius: 8),
-                    ],
-                  ),
-                  child: CircleAvatar(
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(100),
-                      child: Image.asset('assets/images/userImage.png'),
+          child: Padding(
+            padding: EdgeInsets.only(
+              top: 9.0,
+              bottom: 62 + MediaQuery.of(context).padding.bottom,
+            ),
+            child: new ListView(
+              children: <Widget>[
+                DrawerHeader(
+                  child: Container(
+                    height: 120,
+                    width: 120,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      boxShadow: <BoxShadow>[
+                        BoxShadow(
+                            color: AppTheme.grey.withOpacity(0.6),
+                            offset: const Offset(2.0, 4.0),
+                            blurRadius: 8),
+                      ],
                     ),
+                    child: CircleAvatar(
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(100),
+                        child: Image.asset('assets/images/userImage.png'),
+                      ),
+                    ),
+                    padding: const EdgeInsets.only(top: 8, left: 4),
                   ),
-                  padding: const EdgeInsets.only(top: 8, left: 4),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 65.0),
-                child: new ListTile(
+                Padding(
+                  padding: const EdgeInsets.only(left: 65.0),
+                  child: new ListTile(
+                    title: new Text(
+                      "Gobi abyssinie",
+                      style: TextStyle(
+                        fontFamily: AppTheme.fontName,
+                        fontWeight: FontWeight.w600,
+                        fontSize: 20,
+                        color: AppTheme.darkText,
+                      ),
+                    ),
+                    onTap: () {
+                      Navigator.of(context).pop();
+                    },
+                  ),
+                ),
+                const SizedBox(
+                  height: 4,
+                ),
+
+                Divider(
+                  height: 1,
+                  color: AppTheme.grey.withOpacity(0.6),
+                ),
+                Column(
+                  children: <Widget>[
+                    ListTile(
+                      title: Text(
+                        'Se deconnecter',
+                        style: TextStyle(
+                          fontFamily: AppTheme.fontName,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 16,
+                          color: AppTheme.darkText,
+                        ),
+                        textAlign: TextAlign.left,
+                      ),
+                      trailing: Icon(
+                        Icons.power_settings_new,
+                        color: Colors.red,
+                      ),
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) => Connexion(
+                                      userType: null,
+                                    )));
+                      },
+                    ),
+                    SizedBox(
+                      height: MediaQuery.of(context).padding.bottom,
+                    )
+                  ],
+                ),
+                new ListTile(
                   title: new Text(
-                    "Gobi abyssinie",
+                    "Acceuil",
                     style: TextStyle(
                       fontFamily: AppTheme.fontName,
                       fontWeight: FontWeight.w600,
-                      fontSize: 20,
+                      fontSize: 16,
+                      color: AppTheme.darkText,
+                    ),
+                  ),
+                  leading: new Icon(
+                    Icons.home,
+                    color: Colors.green,
+                  ),
+                  onTap: () {
+                    Navigator.of(context).pop();
+                    Navigator.of(context).push(new MaterialPageRoute(
+                        builder: (BuildContext context) => new MainMenu()));
+                  },
+                ),
+                new ListTile(
+                  title: new Text(
+                    "Mes trajets",
+                    style: TextStyle(
+                      fontFamily: AppTheme.fontName,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 16,
+                      color: AppTheme.darkText,
+                    ),
+                  ),
+                  leading: new Icon(
+                    Icons.help,
+                    color: Colors.green,
+                  ),
+                  onTap: () {
+                    Navigator.of(context).pop();
+                    Navigator.of(context).push(new MaterialPageRoute(
+                        builder: (BuildContext context) =>
+                            new FitnessAppHomeScreen()));
+                  },
+                ),
+                new ListTile(
+                  title: new Text(
+                    "Aides",
+                    style: TextStyle(
+                      fontFamily: AppTheme.fontName,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 16,
+                      color: AppTheme.darkText,
+                    ),
+                  ),
+                  leading: new Icon(
+                    Icons.help,
+                    color: Colors.green,
+                  ),
+                  onTap: () {
+                    Navigator.of(context).pop();
+                    Navigator.of(context).push(new MaterialPageRoute(
+                        builder: (BuildContext context) => new HelpScreen()));
+                  },
+                ),
+                //new ListTile(
+                //title: new Text("Inscription"),
+                //leading: new Icon(Icons.account_box),
+                //onTap: () {
+                // Navigator.of(context).pop();
+
+                //Navigator.of(context).push(new MaterialPageRoute(
+                //    builder: (BuildContext context) => new SignUpScreen()));
+                //},
+                //),
+                new ListTile(
+                  leading: new Icon(
+                    Icons.message,
+                    color: Colors.green,
+                  ),
+                  title: new Text(
+                    "Messages",
+                    style: TextStyle(
+                      fontFamily: AppTheme.fontName,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 16,
+                      color: AppTheme.darkText,
+                    ),
+                  ),
+                  onTap: () {
+                    Navigator.of(context).pop();
+                    Navigator.of(context).push(new MaterialPageRoute(
+                        builder: (BuildContext context) => new HomeScreen()));
+                  },
+                ),
+                new ListTile(
+                  leading: new Icon(
+                    Icons.add_location,
+                    color: Colors.green,
+                  ),
+                  title: new Text(
+                    "Localiser",
+                    style: TextStyle(
+                      fontFamily: AppTheme.fontName,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 16,
+                      color: AppTheme.darkText,
+                    ),
+                  ),
+                  onTap: () {
+                    Navigator.of(context).pop();
+                    Navigator.of(context).push(new MaterialPageRoute(
+                        builder: (BuildContext context) => new Mappages()));
+                  },
+                ),
+                new ListTile(
+                  leading: new Icon(
+                    Icons.move_to_inbox,
+                    color: Colors.green,
+                  ),
+                  title: new Text(
+                    "Benin taxi",
+                    style: TextStyle(
+                      fontFamily: AppTheme.fontName,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 16,
+                      color: AppTheme.darkText,
+                    ),
+                  ),
+                  onTap: () {
+                    Navigator.of(context).pop();
+                    Navigator.of(context).push(new MaterialPageRoute(
+                        builder: (BuildContext context) => new MapTaxi()));
+                  },
+                ),
+                new ListTile(
+                  leading: new Icon(
+                    Icons.motorcycle,
+                    color: Colors.green,
+                  ),
+                  title: new Text(
+                    "Proposer un trajet",
+                    style: TextStyle(
+                      fontFamily: AppTheme.fontName,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 16,
+                      color: AppTheme.darkText,
+                    ),
+                  ),
+                  onTap: () {
+                    Navigator.of(context).pop();
+                    Navigator.of(context).push(new MaterialPageRoute(
+                        builder: (BuildContext context) => new Proposer()));
+                  },
+                ),
+
+                new ListTile(
+                  leading: new Icon(
+                    Icons.card_travel,
+                    color: Colors.green,
+                  ),
+                  title: new Text(
+                    "Louer un vehicule",
+                    style: TextStyle(
+                      fontFamily: AppTheme.fontName,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 16,
+                      color: AppTheme.darkText,
+                    ),
+                  ),
+                  onTap: () {
+                    Navigator.of(context).pop();
+                    Navigator.of(context).push(new MaterialPageRoute(
+                        builder: (BuildContext context) =>
+                            new HotelHomeScreen()));
+                  },
+                ),
+                new ListTile(
+                  leading: new Icon(
+                    Icons.info,
+                    color: Colors.green,
+                  ),
+                  title: new Text(
+                    "A Propos de nous",
+                    style: TextStyle(
+                      fontFamily: AppTheme.fontName,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 16,
+                      color: AppTheme.darkText,
+                    ),
+                  ),
+                  onTap: () {
+                    Navigator.of(context).pop();
+                    Navigator.of(context).push(new MaterialPageRoute(
+                        builder: (BuildContext context) => new About()));
+                  },
+                ),
+                new ListTile(
+                  leading: new Icon(
+                    Icons.group,
+                    color: Colors.green,
+                  ),
+                  title: new Text(
+                    "Inviter un ami",
+                    style: TextStyle(
+                      fontFamily: AppTheme.fontName,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 16,
                       color: AppTheme.darkText,
                     ),
                   ),
@@ -261,235 +519,12 @@ class _MyDiaryScreenState extends State<MyDiaryScreen>
                     Navigator.of(context).pop();
                   },
                 ),
-              ),
-              const SizedBox(
-                height: 4,
-              ),
-
-              Divider(
-                height: 1,
-                color: AppTheme.grey.withOpacity(0.6),
-              ),
-              Column(
-                children: <Widget>[
-                  ListTile(
-                    title: Text(
-                      'Se deconnecter',
-                      style: TextStyle(
-                        fontFamily: AppTheme.fontName,
-                        fontWeight: FontWeight.w600,
-                        fontSize: 16,
-                        color: AppTheme.darkText,
-                      ),
-                      textAlign: TextAlign.left,
-                    ),
-                    trailing: Icon(
-                      Icons.power_settings_new,
-                      color: Colors.red,
-                    ),
-                    onTap: () {},
-                  ),
-                  SizedBox(
-                    height: MediaQuery.of(context).padding.bottom,
-                  )
-                ],
-              ),
-              new ListTile(
-                title: new Text(
-                  "Acceuil",
-                  style: TextStyle(
-                    fontFamily: AppTheme.fontName,
-                    fontWeight: FontWeight.w600,
-                    fontSize: 16,
-                    color: AppTheme.darkText,
-                  ),
+                Divider(
+                  height: 1,
+                  color: AppTheme.grey.withOpacity(0.6),
                 ),
-                leading: new Icon(
-                  Icons.home,
-                  color: Colors.black,
-                ),
-                onTap: () {
-                  Navigator.of(context).pop();
-                  Navigator.of(context).push(new MaterialPageRoute(
-                      builder: (BuildContext context) => new MainMenu()));
-                },
-              ),
-              new ListTile(
-                title: new Text(
-                  "Mes trajets",
-                  style: TextStyle(
-                    fontFamily: AppTheme.fontName,
-                    fontWeight: FontWeight.w600,
-                    fontSize: 16,
-                    color: AppTheme.darkText,
-                  ),
-                ),
-                leading: new Icon(
-                  Icons.help,
-                  color: Colors.black,
-                ),
-                onTap: () {
-                  Navigator.of(context).pop();
-                  Navigator.of(context).push(new MaterialPageRoute(
-                      builder: (BuildContext context) =>
-                          new FitnessAppHomeScreen()));
-                },
-              ),
-              new ListTile(
-                title: new Text(
-                  "Aides",
-                  style: TextStyle(
-                    fontFamily: AppTheme.fontName,
-                    fontWeight: FontWeight.w600,
-                    fontSize: 16,
-                    color: AppTheme.darkText,
-                  ),
-                ),
-                leading: new Icon(
-                  Icons.help,
-                  color: Colors.black,
-                ),
-                onTap: () {
-                  Navigator.of(context).pop();
-                  Navigator.of(context).push(new MaterialPageRoute(
-                      builder: (BuildContext context) => new HelpScreen()));
-                },
-              ),
-              //new ListTile(
-              //title: new Text("Inscription"),
-              //leading: new Icon(Icons.account_box),
-              //onTap: () {
-              // Navigator.of(context).pop();
-
-              //Navigator.of(context).push(new MaterialPageRoute(
-              //    builder: (BuildContext context) => new SignUpScreen()));
-              //},
-              //),
-              new ListTile(
-                leading: new Icon(
-                  Icons.message,
-                  color: Colors.black,
-                ),
-                title: new Text(
-                  "Messages",
-                  style: TextStyle(
-                    fontFamily: AppTheme.fontName,
-                    fontWeight: FontWeight.w600,
-                    fontSize: 16,
-                    color: AppTheme.darkText,
-                  ),
-                ),
-                onTap: () {
-                  Navigator.of(context).pop();
-                  Navigator.of(context).push(new MaterialPageRoute(
-                      builder: (BuildContext context) => new HomeScreen()));
-                },
-              ),
-              new ListTile(
-                leading: new Icon(
-                  Icons.add_location,
-                  color: Colors.black,
-                ),
-                title: new Text(
-                  "Localiser",
-                  style: TextStyle(
-                    fontFamily: AppTheme.fontName,
-                    fontWeight: FontWeight.w600,
-                    fontSize: 16,
-                    color: AppTheme.darkText,
-                  ),
-                ),
-                onTap: () {
-                  Navigator.of(context).pop();
-                  Navigator.of(context).push(new MaterialPageRoute(
-                      builder: (BuildContext context) => new Mappages()));
-                },
-              ),
-              new ListTile(
-                leading: new Icon(
-                  Icons.motorcycle,
-                  color: Colors.black,
-                ),
-                title: new Text(
-                  "Proposer un trajet",
-                  style: TextStyle(
-                    fontFamily: AppTheme.fontName,
-                    fontWeight: FontWeight.w600,
-                    fontSize: 16,
-                    color: AppTheme.darkText,
-                  ),
-                ),
-                onTap: () {
-                  Navigator.of(context).pop();
-                  Navigator.of(context).push(new MaterialPageRoute(
-                      builder: (BuildContext context) => new Proposer()));
-                },
-              ),
-
-              new ListTile(
-                leading: new Icon(
-                  Icons.card_travel,
-                  color: Colors.black,
-                ),
-                title: new Text(
-                  "Louer un vehicule",
-                  style: TextStyle(
-                    fontFamily: AppTheme.fontName,
-                    fontWeight: FontWeight.w600,
-                    fontSize: 16,
-                    color: AppTheme.darkText,
-                  ),
-                ),
-                onTap: () {
-                  Navigator.of(context).pop();
-                  Navigator.of(context).push(new MaterialPageRoute(
-                      builder: (BuildContext context) =>
-                          new HotelHomeScreen()));
-                },
-              ),
-              new ListTile(
-                leading: new Icon(
-                  Icons.info,
-                  color: Colors.black,
-                ),
-                title: new Text(
-                  "A Propos de nous",
-                  style: TextStyle(
-                    fontFamily: AppTheme.fontName,
-                    fontWeight: FontWeight.w600,
-                    fontSize: 16,
-                    color: AppTheme.darkText,
-                  ),
-                ),
-                onTap: () {
-                  Navigator.of(context).pop();
-                  Navigator.of(context).push(new MaterialPageRoute(
-                      builder: (BuildContext context) => new MyDiaryScreen()));
-                },
-              ),
-              new ListTile(
-                leading: new Icon(
-                  Icons.group,
-                  color: Colors.black,
-                ),
-                title: new Text(
-                  "Inviter un ami",
-                  style: TextStyle(
-                    fontFamily: AppTheme.fontName,
-                    fontWeight: FontWeight.w600,
-                    fontSize: 16,
-                    color: AppTheme.darkText,
-                  ),
-                ),
-                onTap: () {
-                  Navigator.of(context).pop();
-                },
-              ),
-              Divider(
-                height: 1,
-                color: AppTheme.grey.withOpacity(0.6),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
         body: Stack(
