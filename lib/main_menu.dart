@@ -425,7 +425,7 @@ class _MainMenuState extends State<MainMenu> {
                 color: Colors.green,
               ),
               title: new Text(
-                "Proposer un trajet",
+                "Proposer  un trajet",
                 style: TextStyle(
                   fontFamily: AppTheme.fontName,
                   fontWeight: FontWeight.w600,
