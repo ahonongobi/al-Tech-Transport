@@ -101,7 +101,7 @@ class _ProposerState extends State<Proposer> {
         child: new Scaffold(
             appBar: new AppBar(
               title: Text("Proposer un trajet"),
-              backgroundColor: Color(0xFF008C27),
+              backgroundColor: Color(0xFFED2839),
               actions: <Widget>[
                 Padding(
                   padding: const EdgeInsets.only(right: 7.0),
@@ -119,7 +119,7 @@ class _ProposerState extends State<Proposer> {
                       //new Image.asset(
                       // "assets/ADMIN-APPROVED-USER-REGISTRATION.png",
                       // fit: BoxFit.fill,
-                      // color: Color(0xFF008C27),
+                      // color: Color(0xFFED2839),
                       //height: MediaQuery.of(context).size.width / 3,
                       //),
 
@@ -426,7 +426,7 @@ class _ProposerState extends State<Proposer> {
                                       Radius.circular(24.0)),
                                   //borderRadius: BorderRadius.circular(30.0),
                                   //color: Color(0xff01A0C7),
-                                  color: Color(0xFF008C27),
+                                  color: Color(0xFFED2839),
                                   child: MaterialButton(
                                     minWidth: MediaQuery.of(context).size.width,
                                     padding: EdgeInsets.fromLTRB(

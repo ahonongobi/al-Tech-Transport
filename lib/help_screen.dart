@@ -70,7 +70,7 @@ class _HelpScreenState extends State<HelpScreen> {
                         ],
                       ),
                       child: Material(
-                        color: Color(0xFF008C27),
+                        color: Color(0xFFED2839),
                         child: InkWell(
                           onTap: () {
                             Navigator.push(

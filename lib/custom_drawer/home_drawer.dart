@@ -65,6 +65,11 @@ class _HomeDrawerState extends State<HomeDrawer> {
         icon: Icon(Icons.add_location),
       ),
       DrawerList(
+        index: DrawerIndex.abooner,
+        labelName: 'S\'abonner',
+        icon: Icon(Icons.payment),
+      ),
+      DrawerList(
         index: DrawerIndex.louer,
         labelName: 'Poster une location',
         icon: Icon(Icons.add),
@@ -307,6 +312,7 @@ enum DrawerIndex {
   Testing,
   maps,
   louer,
+  abooner,
   HomeScreen,
 }
 

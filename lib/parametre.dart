@@ -14,7 +14,7 @@ class _ParametreState extends State<Parametre> {
       child: Scaffold(
         appBar: new AppBar(
           title: Text("Informations Profile"),
-          backgroundColor: Color(0xFF008C27),
+          backgroundColor: Color(0xFFED2839),
           actions: <Widget>[],
         ),
         body: SafeArea(
@@ -56,7 +56,7 @@ class _ParametreState extends State<Parametre> {
                 child: ListTile(
                   leading: Icon(
                     Icons.phone,
-                    color: Color(0xFF008C27),
+                    color: Color(0xFFED2839),
                   ),
                   title: Text(
                     "+229 64745149",
@@ -74,7 +74,7 @@ class _ParametreState extends State<Parametre> {
                 child: ListTile(
                   leading: Icon(
                     Icons.email,
-                    color: Color(0xFF008C27),
+                    color: Color(0xFFED2839),
                   ),
                   title: Text(
                     "abyssiniea@gmail.com",
@@ -92,7 +92,7 @@ class _ParametreState extends State<Parametre> {
                 child: ListTile(
                   leading: Icon(
                     Icons.power_settings_new,
-                    color: Color(0xFF008C27),
+                    color: Color(0xFFED2839),
                   ),
                   title: Text(
                     "Deconnexion",
@@ -116,7 +116,7 @@ class _ParametreState extends State<Parametre> {
                   builder: (BuildContext context) => new ShowdraverScreen()));
             },
             tooltip: "Rechercher",
-            backgroundColor: Color(0xFF008C27),
+            backgroundColor: Color(0xFFED2839),
             hoverColor: Colors.redAccent,
             child: Icon(Icons.edit),
           ),

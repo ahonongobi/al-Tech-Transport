@@ -69,7 +69,7 @@ class _Contactez extends State<Contactez> {
         onTap: (() => FocusScope.of(context).requestFocus(new FocusNode())),
         child: new Scaffold(
             appBar: new AppBar(
-              backgroundColor: Color(0xFF008C27),
+              backgroundColor: Color(0xFFED2839),
               title: Text("Message destiné au locatiare"),
             ),
             body: new SingleChildScrollView(
@@ -377,7 +377,7 @@ class _Contactez extends State<Contactez> {
                                       Radius.circular(24.0)),
                                   //borderRadius: BorderRadius.circular(30.0),
                                   //color: Color(0xff01A0C7),
-                                  color: Color(0xFF008C27),
+                                  color: Color(0xFFED2839),
                                   child: MaterialButton(
                                     minWidth: MediaQuery.of(context).size.width,
                                     padding: EdgeInsets.fromLTRB(

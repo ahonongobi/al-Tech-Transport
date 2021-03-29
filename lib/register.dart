@@ -45,7 +45,12 @@ class _Inscription extends State<Inscription> {
           Icons.person,
         )),
     const Statut(
-        'Entreprise',
+        'Taximan',
+        Icon(
+          Icons.motorcycle,
+        )),
+    const Statut(
+        'Location de véhicule',
         Icon(
           Icons.motorcycle,
         )),
@@ -83,7 +88,7 @@ class _Inscription extends State<Inscription> {
                   new Image.asset(
                     "assets/ADMIN-APPROVED-USER-REGISTRATION.png",
                     fit: BoxFit.fill,
-                    color: Color(0xFF008C27),
+                    color: Color(0xFFED2839),
                     height: MediaQuery.of(context).size.width / 2,
                   ),
                   new TextWithStyle(
@@ -300,7 +305,7 @@ class _Inscription extends State<Inscription> {
                                   const BorderRadius.all(Radius.circular(24.0)),
                               //borderRadius: BorderRadius.circular(30.0),
                               //color: Color(0xff01A0C7),
-                              color: Color(0xFF008C27),
+                              color: Color(0xFFED2839),
                               child: MaterialButton(
                                 minWidth: MediaQuery.of(context).size.width,
                                 padding:
@@ -348,7 +353,7 @@ class _Inscription extends State<Inscription> {
                                   child: new TextWithStyle(
                                     'Se connecter',
                                     fontSize: 17.0,
-                                    color: Color(0xFF008C27),
+                                    color: Color(0xFFED2839),
                                   ))
                             ],
                           )
@@ -369,7 +374,7 @@ class _Inscription extends State<Inscription> {
   Future userRegistration() async {
     // SERVER API URL
     String statut = selectedUser.name;
-    if (statut == "Entreprise") {
+    if (statut == "Location de véhicule") {
       Navigator.of(context).push(new MaterialPageRoute(
           builder: (BuildContext context) => new Entreprise(
                 userType: statut,
@@ -379,6 +384,12 @@ class _Inscription extends State<Inscription> {
     if (statut == "Covoiturier") {
       Navigator.of(context).push(new MaterialPageRoute(
           builder: (BuildContext context) => new Choice()));
+    }
+    if (statut == "Taximan") {
+      Navigator.of(context).push(new MaterialPageRoute(
+          builder: (BuildContext context) => new Entreprise(
+                userType: null,
+              )));
     }
 
     var url = 'http://mestps.tech/uac_mcf.php';

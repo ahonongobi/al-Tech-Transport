@@ -200,7 +200,7 @@ class _MyDiaryScreenState extends State<MyDiaryScreen>
       child: Scaffold(
         appBar: new AppBar(
           title: Text("Mes trajets"),
-          backgroundColor: Color(0xFF008C27),
+          backgroundColor: Color(0xFFED2839),
           actions: <Widget>[
             IconButton(
               icon: Icon(Icons.share, color: Colors.white),

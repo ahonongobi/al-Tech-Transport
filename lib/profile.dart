@@ -15,7 +15,7 @@ class _ProfileState extends State<Profile> {
       child: Scaffold(
         appBar: new AppBar(
           title: Text("Informations Profile"),
-          backgroundColor: Color(0xFF008C27),
+          backgroundColor: Color(0xFFED2839),
           actions: <Widget>[],
         ),
         body: SafeArea(
@@ -57,7 +57,7 @@ class _ProfileState extends State<Profile> {
                 child: ListTile(
                   leading: Icon(
                     Icons.phone,
-                    color: Color(0xFF008C27),
+                    color: Color(0xFFED2839),
                   ),
                   title: Text(
                     "+229 64745149",
@@ -75,7 +75,7 @@ class _ProfileState extends State<Profile> {
                 child: ListTile(
                   leading: Icon(
                     Icons.email,
-                    color: Color(0xFF008C27),
+                    color: Color(0xFFED2839),
                   ),
                   title: Text(
                     "abyssiniea@gmail.com",
@@ -99,7 +99,7 @@ class _ProfileState extends State<Profile> {
                   builder: (BuildContext context) => new UpdateProfile()));
             },
             tooltip: "Rechercher",
-            backgroundColor: Color(0xFF008C27),
+            backgroundColor: Color(0xFFED2839),
             hoverColor: Colors.redAccent,
             child: Icon(Icons.edit),
           ),

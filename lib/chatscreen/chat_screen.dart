@@ -20,7 +20,7 @@ class _ChatScreenState extends State<ChatScreen> {
       padding: EdgeInsets.symmetric(horizontal: 25.0, vertical: 15.0),
       width: MediaQuery.of(context).size.width * 0.75,
       decoration: BoxDecoration(
-        color: isMe ? Color(0xFF008C27) : Color(0xFFFFEFEE),
+        color: isMe ? Color(0xFFED2839) : Color(0xFFFFEFEE),
         borderRadius: isMe
             ? BorderRadius.all(
                 Radius.circular(15.0),
@@ -76,7 +76,7 @@ class _ChatScreenState extends State<ChatScreen> {
           IconButton(
             icon: Icon(Icons.attach_file),
             iconSize: 25.0,
-            color: Color(0xFF008C27),
+            color: Color(0xFFED2839),
             onPressed: () {},
           ),
           Expanded(
@@ -91,7 +91,7 @@ class _ChatScreenState extends State<ChatScreen> {
           IconButton(
             icon: Icon(Icons.send),
             iconSize: 25.0,
-            color: Color(0xFF008C27),
+            color: Color(0xFFED2839),
             onPressed: () {},
           ),
         ],
@@ -102,9 +102,9 @@ class _ChatScreenState extends State<ChatScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF008C27),
+      backgroundColor: Color(0xFFED2839),
       appBar: AppBar(
-        backgroundColor: Color(0xFF008C27),
+        backgroundColor: Color(0xFFED2839),
         title: Text(
           widget.user.name,
           style: TextStyle(

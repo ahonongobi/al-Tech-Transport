@@ -13,7 +13,7 @@ class _InfoCarState extends State<InfoCar> {
     return Scaffold(
       appBar: new AppBar(
         title: Text('Informations moto'),
-        backgroundColor: Color(0xFF008C27),
+        backgroundColor: Color(0xFFED2839),
       ),
       body: Padding(
         padding: const EdgeInsets.only(left: 10.0, right: 10.0, top: 50),
@@ -32,7 +32,7 @@ class _InfoCarState extends State<InfoCar> {
                 elevation: 5.0,
                 //borderRadius: BorderRadius.circular(30.0),
                 //color: Color(0xff01A0C7),
-                color: Color(0xFF008C27),
+                color: Color(0xFFED2839),
                 child: MaterialButton(
                   minWidth: MediaQuery.of(context).size.width,
                   padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
@@ -58,7 +58,7 @@ class _InfoCarState extends State<InfoCar> {
                 elevation: 5.0,
                 //borderRadius: BorderRadius.circular(30.0),
                 //color: Color(0xff01A0C7),
-                color: Color(0xFF008C27),
+                color: Color(0xFFED2839),
                 child: MaterialButton(
                   minWidth: MediaQuery.of(context).size.width,
                   padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
@@ -84,7 +84,7 @@ class _InfoCarState extends State<InfoCar> {
                 elevation: 5.0,
                 //borderRadius: BorderRadius.circular(30.0),
                 //color: Color(0xff01A0C7),
-                color: Color(0xFF008C27),
+                color: Color(0xFFED2839),
                 child: MaterialButton(
                   minWidth: MediaQuery.of(context).size.width,
                   padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
@@ -106,7 +106,7 @@ class _InfoCarState extends State<InfoCar> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Color(0xFF008C27),
+        backgroundColor: Color(0xFFED2839),
         onPressed: () {
           showDialog(
             barrierDismissible: true,

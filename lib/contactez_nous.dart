@@ -16,7 +16,7 @@ class _ContactezUsState extends State<ContactezUs> {
           IconButton(
             icon: Icon(Icons.attach_file),
             iconSize: 25.0,
-            color: Color(0xFF008C27),
+            color: Color(0xFFED2839),
             onPressed: () {},
           ),
           Expanded(
@@ -31,7 +31,7 @@ class _ContactezUsState extends State<ContactezUs> {
           IconButton(
             icon: Icon(Icons.send),
             iconSize: 25.0,
-            color: Color(0xFF008C27),
+            color: Color(0xFFED2839),
             onPressed: () {},
           ),
         ],
@@ -43,7 +43,7 @@ class _ContactezUsState extends State<ContactezUs> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFF008C27),
+        backgroundColor: Color(0xFFED2839),
         title: Text(
           'Contactez nous',
           style: TextStyle(

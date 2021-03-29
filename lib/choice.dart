@@ -17,7 +17,7 @@ class _ChoiceState extends State<Choice> {
           "Choix de covoiturage",
           style: TextStyle(fontSize: 20),
         ),
-        backgroundColor: Color(0xFF008C27),
+        backgroundColor: Color(0xFFED2839),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -31,7 +31,7 @@ class _ChoiceState extends State<Choice> {
                     borderRadius: const BorderRadius.all(Radius.circular(24.0)),
                     //borderRadius: BorderRadius.circular(30.0),
                     //color: Color(0xff01A0C7),
-                    color: Color(0xFF008C27),
+                    color: Color(0xFFED2839),
                     child: MaterialButton(
                       minWidth: MediaQuery.of(context).size.width / 3,
                       padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
@@ -60,7 +60,7 @@ class _ChoiceState extends State<Choice> {
                     borderRadius: const BorderRadius.all(Radius.circular(24.0)),
                     //borderRadius: BorderRadius.circular(30.0),
                     //color: Color(0xff01A0C7),
-                    color: Color(0xFF008C27),
+                    color: Color(0xFFED2839),
                     child: MaterialButton(
                       minWidth: MediaQuery.of(context).size.width / 3,
                       padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),

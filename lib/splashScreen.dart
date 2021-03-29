@@ -26,12 +26,12 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF008C27),
+      backgroundColor: Color(0xFFED2839),
       body: Stack(
         fit: StackFit.expand,
         children: <Widget>[
           Container(
-            decoration: BoxDecoration(color: Color(0xFF008C27)),
+            decoration: BoxDecoration(color: Color(0xFFED2839)),
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -42,7 +42,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       CircleAvatar(
-                        backgroundColor: Color(0xFF008C27),
+                        backgroundColor: Color(0xFFED2839),
                         radius: 100.0,
                         //child: Icon(
                         //Icons.add_location,
@@ -64,7 +64,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     CircularProgressIndicator(),
                     Padding(padding: EdgeInsets.only(top: 20.04)),
                     CircleAvatar(
-                      backgroundColor: Color(0xFF008C27),
+                      backgroundColor: Color(0xFFED2839),
                       radius: 70.0,
                       //child: Icon(
                       //Icons.add_location,

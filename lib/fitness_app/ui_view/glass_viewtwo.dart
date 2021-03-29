@@ -87,7 +87,7 @@ class GlassViewTwo extends StatelessWidget {
                                   ),
                                   Icon(
                                     Icons.access_alarm,
-                                    color: Color(0xFF008C27),
+                                    color: Color(0xFFED2839),
                                   ),
                                   Text(
                                     "Paris-Cotonou",
@@ -115,11 +115,11 @@ class GlassViewTwo extends StatelessWidget {
                                           top: 2.0),
                                       child: Icon(
                                         Icons.star,
-                                        color: Color(0xFF008C27),
+                                        color: Color(0xFFED2839),
                                       )),
                                   Icon(
                                     Icons.star,
-                                    color: Color(0xFF008C27),
+                                    color: Color(0xFFED2839),
                                   ),
                                   InkWell(
                                     onTap: () {
@@ -127,7 +127,7 @@ class GlassViewTwo extends StatelessWidget {
                                     },
                                     child: Icon(
                                       Icons.message,
-                                      color: Color(0xFF008C27),
+                                      color: Color(0xFFED2839),
                                     ),
                                   ),
                                   SizedBox(
@@ -167,7 +167,7 @@ class GlassViewTwo extends StatelessWidget {
                             fontFamily: AppTheme.fontName,
                             fontWeight: FontWeight.w600,
                             fontSize: 16,
-                            color: Color(0xFF008C27),
+                            color: Color(0xFFED2839),
                             //backgroundColor: HexColor("#D7E0F9"),
                           ),
                         ),

@@ -30,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF008C27),
+      backgroundColor: Color(0xFFED2839),
       body: Column(
         children: <Widget>[
           CategorySelector(),
@@ -53,7 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Color(0xFF008C27),
+        backgroundColor: Color(0xFFED2839),
         onPressed: () {
           Navigator.of(context).pop();
         },

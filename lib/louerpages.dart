@@ -68,7 +68,7 @@ class _LouerpagesState extends State<Louerpages> {
                   new Image.asset(
                     "assets/design_course/v1.jpg",
                     fit: BoxFit.fill,
-                    //color: Color(0xFF008C27),
+                    //color: Color(0xFFED2839),
                     height: MediaQuery.of(context).size.width / 3,
                   ),
                   Padding(
@@ -296,7 +296,7 @@ class _LouerpagesState extends State<Louerpages> {
                                   const BorderRadius.all(Radius.circular(24.0)),
                               //borderRadius: BorderRadius.circular(30.0),
                               //color: Color(0xff01A0C7),
-                              color: Color(0xFF008C27),
+                              color: Color(0xFFED2839),
                               child: MaterialButton(
                                 minWidth: MediaQuery.of(context).size.width,
                                 padding:

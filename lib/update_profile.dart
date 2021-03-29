@@ -15,7 +15,7 @@ class _UpdateProfileState extends State<UpdateProfile> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: new AppBar(
-        backgroundColor: Color(0xFF008C27),
+        backgroundColor: Color(0xFFED2839),
         title: Text("Mofications profile"),
       ),
       body: SingleChildScrollView(
@@ -39,7 +39,7 @@ class _UpdateProfileState extends State<UpdateProfile> {
                       },
                       child: Icon(
                         Icons.edit,
-                        color: Color(0xFF008C27),
+                        color: Color(0xFFED2839),
                       ),
                     ),
                     InkWell(
@@ -52,7 +52,7 @@ class _UpdateProfileState extends State<UpdateProfile> {
                           fontFamily: AppTheme.fontName,
                           fontWeight: FontWeight.w600,
                           fontSize: 16,
-                          color: Color(0xFF008C27),
+                          color: Color(0xFFED2839),
                         ),
                       ),
                     ),
@@ -72,7 +72,7 @@ class _UpdateProfileState extends State<UpdateProfile> {
                     IconButton(
                         icon: Icon(
                           Icons.email,
-                          color: Color(0xFF008C27),
+                          color: Color(0xFFED2839),
                         ),
                         onPressed: null),
                     Expanded(
@@ -105,7 +105,7 @@ class _UpdateProfileState extends State<UpdateProfile> {
                     IconButton(
                         icon: Icon(
                           Icons.phone,
-                          color: Color(0xFF008C27),
+                          color: Color(0xFFED2839),
                         ),
                         onPressed: null),
                     Expanded(
@@ -138,7 +138,7 @@ class _UpdateProfileState extends State<UpdateProfile> {
                     IconButton(
                         icon: Icon(
                           Icons.supervised_user_circle,
-                          color: Color(0xFF008C27),
+                          color: Color(0xFFED2839),
                         ),
                         onPressed: null),
                     Expanded(
@@ -166,7 +166,7 @@ class _UpdateProfileState extends State<UpdateProfile> {
         ),
       ),
       floatingActionButton: FloatingActionButton.extended(
-          backgroundColor: Color(0xFF008C27),
+          backgroundColor: Color(0xFFED2839),
           onPressed: () {
             print('Submiting...');
           },

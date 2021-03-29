@@ -12,7 +12,7 @@ class _AboutState extends State<About> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: new AppBar(
-        backgroundColor: Color(0xFF008C27),
+        backgroundColor: Color(0xFFED2839),
         title: Text(
           "A propos de nous",
           style: TextStyle(
@@ -89,7 +89,7 @@ class _AboutState extends State<About> {
         )),
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Color(0xFF008C27),
+        backgroundColor: Color(0xFFED2839),
         onPressed: () {
           Navigator.push(
               context,

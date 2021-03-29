@@ -174,7 +174,7 @@ class _MainMenuState extends State<MainMenu> {
     return Scaffold(
       appBar: new AppBar(
         title: Text("Al-Tech Transport"),
-        backgroundColor: Color(0xFF008C27),
+        backgroundColor: Color(0xFFED2839),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.share, color: Colors.white),

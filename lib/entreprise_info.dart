@@ -91,14 +91,14 @@ class _Entreprise extends State<Entreprise> {
               backgroundColor: Colors.white,
               title: Text(
                 "Informations Personnelles",
-                style: TextStyle(color: Color(0xFF008C27)),
+                style: TextStyle(color: Color(0xFFED2839)),
               ),
               actions: <Widget>[
                 Padding(
                   padding: const EdgeInsets.only(right: 5.0),
                   child: Icon(
                     Icons.account_circle,
-                    color: Color(0xFF008C27),
+                    color: Color(0xFFED2839),
                   ),
                 ),
               ],
@@ -113,7 +113,7 @@ class _Entreprise extends State<Entreprise> {
                       new Image.asset(
                         "assets/ADMIN-APPROVED-USER-REGISTRATION.png",
                         fit: BoxFit.fill,
-                        // color: Color(0xFF008C27),
+                        // color: Color(0xFFED2839),
                         height: MediaQuery.of(context).size.width / 3,
                       ),
                       //new TextWithStyle(
@@ -403,7 +403,7 @@ class _Entreprise extends State<Entreprise> {
                                       Radius.circular(24.0)),
                                   //borderRadius: BorderRadius.circular(30.0),
                                   //color: Color(0xff01A0C7),
-                                  color: Color(0xFF008C27),
+                                  color: Color(0xFFED2839),
                                   child: MaterialButton(
                                     minWidth: MediaQuery.of(context).size.width,
                                     padding: EdgeInsets.fromLTRB(
@@ -474,7 +474,7 @@ class _Entreprise extends State<Entreprise> {
                                       child: new TextWithStyle(
                                         'Se connecter',
                                         fontSize: 17.0,
-                                        color: Color(0xFF008C27),
+                                        color: Color(0xFFED2839),
                                       ))
                                 ],
                               )

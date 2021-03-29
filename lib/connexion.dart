@@ -51,7 +51,7 @@ class _Connexion extends State<Connexion> {
                 children: [
                   new Image.asset(
                     "assets/ADMIN-APPROVED-USER-REGISTRATION.png",
-                    color: Color(0xFF008C27),
+                    color: Color(0xFFED2839),
                     fit: BoxFit.fill,
                     height: MediaQuery.of(context).size.width / 2,
                   ),
@@ -174,7 +174,7 @@ class _Connexion extends State<Connexion> {
                                   const BorderRadius.all(Radius.circular(24.0)),
                               //borderRadius: BorderRadius.circular(30.0),
                               //color: Color(0xff01A0C7),
-                              color: Color(0xFF008C27),
+                              color: Color(0xFFED2839),
                               child: MaterialButton(
                                 minWidth: MediaQuery.of(context).size.width,
                                 padding:

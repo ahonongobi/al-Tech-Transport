@@ -46,7 +46,7 @@ class _MappagesState extends State<Mappages> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Bénin Taxi proche"),
-        backgroundColor: Color(0xFF008C27),
+        backgroundColor: Color(0xFFED2839),
         actions: <Widget>[
           Padding(
             padding: const EdgeInsets.only(right: 7.0),
@@ -70,7 +70,7 @@ class _MappagesState extends State<Mappages> {
                 builder: (BuildContext context) => new ShowdraverScreen()));
           },
           tooltip: "Rechercher",
-          backgroundColor: Color(0xFF008C27),
+          backgroundColor: Color(0xFFED2839),
           hoverColor: Colors.redAccent,
           child: Icon(Icons.search),
         ),

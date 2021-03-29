@@ -14,7 +14,7 @@ class _CategorySelectorState extends State<CategorySelector> {
   Widget build(BuildContext context) {
     return Container(
       height: 90.0,
-      color: Color(0xFF008C27),
+      color: Color(0xFFED2839),
       child: Center(
         child: Text(
           'Discussion',

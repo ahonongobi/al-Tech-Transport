@@ -60,7 +60,7 @@ class _MapHomePageState extends State<MapHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Color(0xFF008C27),
+          backgroundColor: Color(0xFFED2839),
           title: Text("Emplacement"),
         ),
         body: Center(

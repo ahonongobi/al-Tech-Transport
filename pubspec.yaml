@@ -39,6 +39,7 @@ dependencies:
   flutter_svg: ^0.17.4
   flutter_launcher_icons: ^0.7.4
   google_maps_place_picker: ^0.10.0
+  google_fonts: ^0.2.0
   #location: ^3.0.1
   #geolocator: ^5.3.0
   #android_intent: ^0.3.6+12
@@ -72,6 +73,14 @@ flutter:
     - assets/ADMIN-APPROVED-USER-REGISTRATION.png 
     - assets/destinationMapMarker.png
     - icon/icon.png
+    - assets/notification.png
+    - assets/calendar.png
+    - assets/festival.png
+    - assets/food.png
+    - assets/map.png
+    - assets/setting.png
+    - assets/todo.png
+    - assets/location_pin.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

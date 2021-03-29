@@ -20,7 +20,10 @@ import 'package:best_flutter_ui_templates/register.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:share/share.dart';
+
+import 'griddashboard.dart';
 
 class MainMenu extends StatefulWidget {
   @override
@@ -28,6 +31,7 @@ class MainMenu extends StatefulWidget {
 }
 
 List<HomeList> homeList = HomeList.homeList;
+
 Widget mainMenu = GridView.builder(
   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
       crossAxisCount: 4, childAspectRatio: 1.0),
@@ -71,8 +75,9 @@ Widget mainMenu = GridView.builder(
     ),
   ),
 );
+
 Widget actualite = Container(
-  height: 218.4,
+  height: 100.4,
   margin: EdgeInsets.only(top: 16),
   child: PageView(
       //final _pageController = PageController(viewportFraction: 0.877);
@@ -84,7 +89,7 @@ Widget actualite = Container(
           (index) => Container(
                 margin: EdgeInsets.only(right: 28.8),
                 width: 333.6,
-                height: 218.6,
+                height: 150.6,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(9.6),
                     image: DecorationImage(
@@ -177,7 +182,7 @@ class _MainMenuState extends State<MainMenu> {
     return Scaffold(
       appBar: new AppBar(
         title: Text("Al-Tech Transport"),
-        backgroundColor: Color(0xFF008C27),
+        backgroundColor: Color(0xFFED2839),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.share, color: Colors.white),
@@ -298,10 +303,7 @@ class _MainMenuState extends State<MainMenu> {
                   color: AppTheme.darkText,
                 ),
               ),
-              leading: new Icon(
-                Icons.home,
-                color: Colors.green,
-              ),
+              leading: new Icon(Icons.home, color: Color(0xFFED2839)),
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.of(context).push(new MaterialPageRoute(
@@ -318,10 +320,7 @@ class _MainMenuState extends State<MainMenu> {
                   color: AppTheme.darkText,
                 ),
               ),
-              leading: new Icon(
-                Icons.help,
-                color: Colors.green,
-              ),
+              leading: new Icon(Icons.help, color: Color(0xFFED2839)),
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.of(context).push(new MaterialPageRoute(
@@ -339,10 +338,7 @@ class _MainMenuState extends State<MainMenu> {
                   color: AppTheme.darkText,
                 ),
               ),
-              leading: new Icon(
-                Icons.help,
-                color: Colors.green,
-              ),
+              leading: new Icon(Icons.help, color: Color(0xFFED2839)),
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.of(context).push(new MaterialPageRoute(
@@ -359,31 +355,28 @@ class _MainMenuState extends State<MainMenu> {
             //    builder: (BuildContext context) => new SignUpScreen()));
             //},
             //),
+            //new ListTile(
+            //leading: new Icon(
+            // Icons.message,
+            // color: Color(0xFFED2839)
+            //),
+            //title: new Text(
+            //"Messages",
+            //style: TextStyle(
+            // fontFamily: AppTheme.fontName,
+            // fontWeight: FontWeight.w600,
+            // fontSize: 16,
+            // color: AppTheme.darkText,
+            //),
+            //),
+            //onTap: () {
+            //Navigator.of(context).pop();
+            //Navigator.of(context).push(new MaterialPageRoute(
+            // builder: (BuildContext context) => new HomeScreen()));
+            // },
+            //),
             new ListTile(
-              leading: new Icon(
-                Icons.message,
-                color: Colors.green,
-              ),
-              title: new Text(
-                "Messages",
-                style: TextStyle(
-                  fontFamily: AppTheme.fontName,
-                  fontWeight: FontWeight.w600,
-                  fontSize: 16,
-                  color: AppTheme.darkText,
-                ),
-              ),
-              onTap: () {
-                Navigator.of(context).pop();
-                Navigator.of(context).push(new MaterialPageRoute(
-                    builder: (BuildContext context) => new HomeScreen()));
-              },
-            ),
-            new ListTile(
-              leading: new Icon(
-                Icons.add_location,
-                color: Colors.green,
-              ),
+              leading: new Icon(Icons.add_location, color: Color(0xFFED2839)),
               title: new Text(
                 "Localiser",
                 style: TextStyle(
@@ -402,7 +395,7 @@ class _MainMenuState extends State<MainMenu> {
             new ListTile(
               leading: new Icon(
                 Icons.move_to_inbox,
-                color: Colors.green,
+                color: Color(0xFFED2839),
               ),
               title: new Text(
                 "Benin taxi",
@@ -420,10 +413,7 @@ class _MainMenuState extends State<MainMenu> {
               },
             ),
             new ListTile(
-              leading: new Icon(
-                Icons.motorcycle,
-                color: Colors.green,
-              ),
+              leading: new Icon(Icons.motorcycle, color: Color(0xFFED2839)),
               title: new Text(
                 "Proposer  un trajet",
                 style: TextStyle(
@@ -441,10 +431,7 @@ class _MainMenuState extends State<MainMenu> {
             ),
 
             new ListTile(
-              leading: new Icon(
-                Icons.card_travel,
-                color: Colors.green,
-              ),
+              leading: new Icon(Icons.card_travel, color: Color(0xFFED2839)),
               title: new Text(
                 "Louer un vehicule",
                 style: TextStyle(
@@ -461,10 +448,7 @@ class _MainMenuState extends State<MainMenu> {
               },
             ),
             new ListTile(
-              leading: new Icon(
-                Icons.info,
-                color: Colors.green,
-              ),
+              leading: new Icon(Icons.info, color: Color(0xFFED2839)),
               title: new Text(
                 "A Propos de nous",
                 style: TextStyle(
@@ -481,10 +465,7 @@ class _MainMenuState extends State<MainMenu> {
               },
             ),
             new ListTile(
-              leading: new Icon(
-                Icons.group,
-                color: Colors.green,
-              ),
+              leading: new Icon(Icons.group, color: Color(0xFFED2839)),
               title: new Text(
                 "Inviter un ami",
                 style: TextStyle(
@@ -505,449 +486,24 @@ class _MainMenuState extends State<MainMenu> {
           ],
         ),
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: <Widget>[
-            Card(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(15.0),
-              ),
-              //color: Color(#FFFededed),
-              color: Color(0xFFededed),
-              elevation: 10.0,
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  InkWell(
-                    onTap: () {
-                      Navigator.of(context).push(new MaterialPageRoute(
-                          builder: (BuildContext context) =>
-                              new ContactezUs()));
-                    },
-                    child: const ListTile(
-                      leading: CircleAvatar(
-                        child: ClipRRect(
-                            child: Image(
-                                image:
-                                    AssetImage('assets/images/userImage.png'))),
-                      ),
-                      title: Text(
-                        '7:00 De Cotonou - Paris 10:00',
-                        style: TextStyle(
-                          fontFamily: AppTheme.fontName,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 16,
-                          color: AppTheme.darkText,
-                        ),
-                      ),
-                      subtitle: Text(
-                        '250F',
-                        style: TextStyle(
-                          fontFamily: AppTheme.fontName,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 12,
-                          color: Colors.green,
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Card(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(15.0),
-              ),
-              //color: Color(#FFFededed),
-              color: Color(0xFFededed),
-              elevation: 10.0,
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  InkWell(
-                    onTap: () {
-                      Navigator.of(context).push(new MaterialPageRoute(
-                          builder: (BuildContext context) =>
-                              new ContactezUs()));
-                    },
-                    child: const ListTile(
-                      leading: CircleAvatar(
-                        child: ClipRRect(
-                            child: Image(
-                                image:
-                                    AssetImage('assets/images/userImage.png'))),
-                      ),
-                      title: Text(
-                        '7:00 De Cotonou - Paris 10:00',
-                        style: TextStyle(
-                          fontFamily: AppTheme.fontName,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 16,
-                          color: AppTheme.darkText,
-                        ),
-                      ),
-                      subtitle: Text(
-                        '250F',
-                        style: TextStyle(
-                          fontFamily: AppTheme.fontName,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 12,
-                          color: Colors.green,
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Card(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(15.0),
-              ),
-              //color: Color(#FFFededed),
-              color: Color(0xFFededed),
-              elevation: 10.0,
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  InkWell(
-                    child: const ListTile(
-                      leading: CircleAvatar(
-                        child: ClipRRect(
-                            child: Image(
-                                image:
-                                    AssetImage('assets/images/userImage.png'))),
-                      ),
-                      title: Text(
-                        '7:00 De Cotonou - Paris 10:00',
-                        style: TextStyle(
-                          fontFamily: AppTheme.fontName,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 16,
-                          color: AppTheme.darkText,
-                        ),
-                      ),
-                      subtitle: Text(
-                        '250F',
-                        style: TextStyle(
-                          fontFamily: AppTheme.fontName,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 12,
-                          color: Colors.green,
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Card(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(15.0),
-              ),
-              //color: Color(#FFFededed),
-              color: Color(0xFFededed),
-              elevation: 10.0,
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  InkWell(
-                    onTap: () {
-                      Navigator.of(context).push(new MaterialPageRoute(
-                          builder: (BuildContext context) =>
-                              new ContactezUs()));
-                    },
-                    child: const ListTile(
-                      leading: CircleAvatar(
-                        child: ClipRRect(
-                            child: Image(
-                                image:
-                                    AssetImage('assets/images/userImage.png'))),
-                      ),
-                      title: Text(
-                        '7:00 De Cotonou - Paris 10:00',
-                        style: TextStyle(
-                          fontFamily: AppTheme.fontName,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 16,
-                          color: AppTheme.darkText,
-                        ),
-                      ),
-                      subtitle: Text(
-                        '250F',
-                        style: TextStyle(
-                          fontFamily: AppTheme.fontName,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 12,
-                          color: Colors.green,
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Card(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(15.0),
-              ),
-              //color: Color(#FFFededed),
-              color: Color(0xFFededed),
-              elevation: 10.0,
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  InkWell(
-                    onTap: () {
-                      Navigator.of(context).push(new MaterialPageRoute(
-                          builder: (BuildContext context) =>
-                              new ContactezUs()));
-                    },
-                    child: const ListTile(
-                      leading: CircleAvatar(
-                        child: ClipRRect(
-                            child: Image(
-                                image:
-                                    AssetImage('assets/images/userImage.png'))),
-                      ),
-                      title: Text(
-                        '7:00 De Cotonou - Paris 10:00',
-                        style: TextStyle(
-                          fontFamily: AppTheme.fontName,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 16,
-                          color: AppTheme.darkText,
-                        ),
-                      ),
-                      subtitle: Text(
-                        '250F',
-                        style: TextStyle(
-                          fontFamily: AppTheme.fontName,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 12,
-                          color: Colors.green,
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Card(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(15.0),
-              ),
-              //color: Color(#FFFededed),
-              color: Color(0xFFededed),
-              elevation: 10.0,
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  InkWell(
-                    onTap: () {
-                      Navigator.of(context).push(new MaterialPageRoute(
-                          builder: (BuildContext context) =>
-                              new ContactezUs()));
-                    },
-                    child: const ListTile(
-                      leading: CircleAvatar(
-                        child: ClipRRect(
-                            child: Image(
-                                image:
-                                    AssetImage('assets/images/userImage.png'))),
-                      ),
-                      title: Text(
-                        '7:00 De Cotonou - Paris 10:00',
-                        style: TextStyle(
-                          fontFamily: AppTheme.fontName,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 16,
-                          color: AppTheme.darkText,
-                        ),
-                      ),
-                      subtitle: Text(
-                        '250F',
-                        style: TextStyle(
-                          fontFamily: AppTheme.fontName,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 12,
-                          color: Colors.green,
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Card(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(15.0),
-              ),
-              //color: Color(#FFFededed),
-              color: Color(0xFFededed),
-              elevation: 10.0,
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  InkWell(
-                    child: const ListTile(
-                      leading: CircleAvatar(
-                        child: ClipRRect(
-                            child: Image(
-                                image:
-                                    AssetImage('assets/images/userImage.png'))),
-                      ),
-                      title: Text(
-                        '7:00 De Cotonou - Paris 10:00',
-                        style: TextStyle(
-                          fontFamily: AppTheme.fontName,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 16,
-                          color: AppTheme.darkText,
-                        ),
-                      ),
-                      subtitle: Text(
-                        '250F',
-                        style: TextStyle(
-                          fontFamily: AppTheme.fontName,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 12,
-                          color: Colors.green,
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Card(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(15.0),
-              ),
-              //color: Color(#FFFededed),
-              color: Color(0xFFededed),
-              elevation: 10.0,
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  InkWell(
-                    child: const ListTile(
-                      leading: CircleAvatar(
-                        child: ClipRRect(
-                            child: Image(
-                                image:
-                                    AssetImage('assets/images/userImage.png'))),
-                      ),
-                      title: Text(
-                        '7:00 De Cotonou - Paris 10:00',
-                        style: TextStyle(
-                          fontFamily: AppTheme.fontName,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 16,
-                          color: AppTheme.darkText,
-                        ),
-                      ),
-                      subtitle: Text(
-                        '250F',
-                        style: TextStyle(
-                          fontFamily: AppTheme.fontName,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 12,
-                          color: Colors.green,
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Card(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(15.0),
-              ),
-              //color: Color(#FFFededed),
-              color: Color(0xFFededed),
-              elevation: 10.0,
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  InkWell(
-                    child: const ListTile(
-                      leading: CircleAvatar(
-                        child: ClipRRect(
-                            child: Image(
-                                image:
-                                    AssetImage('assets/images/userImage.png'))),
-                      ),
-                      title: Text(
-                        '7:00 De Cotonou - Paris 10:00',
-                        style: TextStyle(
-                          fontFamily: AppTheme.fontName,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 16,
-                          color: AppTheme.darkText,
-                        ),
-                      ),
-                      subtitle: Text(
-                        '250F',
-                        style: TextStyle(
-                          fontFamily: AppTheme.fontName,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 12,
-                          color: Colors.green,
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Card(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(15.0),
-              ),
-              //color: Color(#FFFededed),
-              color: Color(0xFFededed),
-              elevation: 10.0,
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  InkWell(
-                    child: const ListTile(
-                      leading: CircleAvatar(
-                        child: ClipRRect(
-                            child: Image(
-                                image:
-                                    AssetImage('assets/images/userImage.png'))),
-                      ),
-                      title: Text(
-                        '7:00 De Cotonou - Paris 10:00',
-                        style: TextStyle(
-                          fontFamily: AppTheme.fontName,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 16,
-                          color: AppTheme.darkText,
-                        ),
-                      ),
-                      subtitle: Text(
-                        '250F',
-                        style: TextStyle(
-                          fontFamily: AppTheme.fontName,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 12,
-                          color: Colors.green,
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
+      body: Column(
+        children: <Widget>[
+          SizedBox(
+            height: 10,
+          ),
+          GridDashboard(),
+          SizedBox(
+            height: 10.0,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 3.0, left: 15.0),
+            child: titre,
+          ),
+          actualite,
+        ],
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Color(0xFF008C27),
+        backgroundColor: Color(0xFFED2839),
         onPressed: () {
           Navigator.of(context).push(new MaterialPageRoute(
               builder: (BuildContext context) => new Proposer()));

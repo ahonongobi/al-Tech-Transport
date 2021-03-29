@@ -255,24 +255,6 @@ class HomeListView extends StatelessWidget {
                       listData.imagePath,
                       fit: BoxFit.cover,
                     ),
-                    Positioned(
-                      right: 0.0,
-                      top: 0.0,
-                      child: Container(
-                        height: 30.0,
-                        color: DesignCourseAppTheme.nearlyBlue,
-                        child: Padding(
-                          padding: const EdgeInsets.all(5.0),
-                          child: Text(
-                            listData.texte,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
                     Material(
                       color: Colors.transparent,
                       child: InkWell(

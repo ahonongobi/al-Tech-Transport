@@ -16,6 +16,7 @@ import 'package:best_flutter_ui_templates/localiser.dart';
 import 'package:best_flutter_ui_templates/louerpages.dart';
 import 'package:best_flutter_ui_templates/model/homelist.dart';
 import 'package:best_flutter_ui_templates/register.dart';
+import 'package:best_flutter_ui_templates/subscribe.dart';
 import 'package:flutter/material.dart';
 
 class NavigationHomeScreen extends StatefulWidget {
@@ -141,6 +142,9 @@ class _NavigationHomeScreenState extends State<NavigationHomeScreen>
       } else if (drawerIndex == DrawerIndex.About) {
         Navigator.of(context).push(new MaterialPageRoute(
             builder: (BuildContext context) => new About()));
+      } else if (drawerIndex == DrawerIndex.abooner) {
+        Navigator.of(context).push(new MaterialPageRoute(
+            builder: (BuildContext context) => new MainCard()));
       } else if (drawerIndex == DrawerIndex.louer) {
         setState(() {
           screenView = Louerpages();
